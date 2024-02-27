@@ -1,13 +1,641 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <!-- <link rel="stylesheet" href="https://tool.aiwhatsapp.in/css/calender.css"> -->
+    <link rel="stylesheet" href="question_page.css">
+    <!-- <link rel="stylesheet" href="calendar_without_slots.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;500&family=Montserrat:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <div class="Container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <span class="loading">Loading....</span>
+    </div>
+    <div class="page-wraper">
+        <div class="Outer-div div" id="Outer-div div">
+            <div class="Left-Side-Inner-div" id="left-Side-Inner-div">
+                <div class="img-heading-para-container" id="left-side-content">
+                    <div class="Arrow-Icon-Right-div">
+                        <button class="Arrow-Icon-Right">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill=" rgb(0,105,255)"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="img-heading-container">
+                        <img src="https://tool.aiwhatsapp.in/storage/profile_6_1708063337.png" alt="" class="logo">
+                        <div class="Harshit">Test</div>
+
+                        <h1 class="Business-Growth-h1">Wellness Business Growth Meeting</h1>
+                    </div>
+                    <div class="svg-45-min"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                            viewBox="0 0 512 512">
+                            <path fill="#1A1A1A9C"
+                                d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+                        </svg>
+                        <span class="span-45-min">30 min</span>
+                    </div>
+                    <div class="calendar-Info span-45-min"><span><svg xmlns="http://www.w3.org/2000/svg" height="20"
+                                width="20" fill="gray" viewBox="0 0 448 512">
+                                <path
+                                    d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z" />
+                            </svg></span>3:00pm - 4:00pm, Saturday, March 23, 2024
+                    </div>
+                    <div class="calendar-Info span-45-min"><span><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="gray" class="bi bi-globe-central-south-asia" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4.882 1.731a.48.48 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.7.7 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a1 1 0 0 0-.462-.04 7 7 0 0 1 2.45-2.027m-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.8.8 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.45.45 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282l.04-.001a7.003 7.003 0 0 1-12.658.905Z" />
+                            </svg></span>India Standard Time
+                    </div>
+
+                    <div class="para-Left-div">
+                        <p>If you are tired of High Marketing Cost or Low Quality Leads or No Leads then this once
+                            Call
+                            is going to change your Business Game in next 10 Days.</p>
+                    </div>
+                </div>
+                <div class="Cookie-Report"><button id="Cookie-settings-button">Cookie settings</button>
+                    <span><a href="" class="Report-abuse">Report abuse</a></span>
+                </div>
+            </div>
+            <div class="right-content" id="question-container">
+                <div class="top-text right-content-header">
+                    <span>Enter Details</span>
+                </div>
+                <div class="">
+                    <div class="calender-div">
+                        <form action="https://tool.aiwhatsapp.in/save-booking-responses" class="questions_form py-2"
+                            method="POST">
+                            <input type="hidden" name="_token" value="LKypWTRdeUKXYgR4BE9eegMch7MsLaIkmUihQRqN">
+                            <input type="hidden" name="event_id" value="3">
+                            <input type="hidden" name="selected_date" value="2024-02-23">
+                            <input type="hidden" name="selected_time" value="10:00 AM">
+                            <div>
+                                <label for="name" class="question-label">Name &nbsp;*</label>
+                                <input type="text" class="form-control mb-4 answer-input" id="name" name="invitee_name">
+                            </div>
+                            <div>
+                                <label for="email" class="question-label">Email &nbsp;*</label>
+                                <input type="text" class="form-control mb-4 answer-input" id="email"
+                                    name="invitee_email">
+                            </div>
+                            <div>
+                                <label for="phone" class="question-label">Phone &nbsp;*</label>
+                                <input type="text" class="form-control mb-4 answer-input" id="phone"
+                                    name="invitee_phone">
+                            </div>
+                            <input type="hidden" name="question_ids[]" value="69">
+                            <div class="form-group">
+                                <label for="question_69" class="question-label">Please share anything that will help
+                                    prepare for our meeting. &nbsp;*</label>
+
+                                <input type="text" class="form-control mb-4 answer-input" id="question_69"
+                                    name="question_69">
+                            </div>
+                            <input type="hidden" name="question_ids[]" value="70">
+                            <div class="form-group">
+                                <label for="question_70" class="question-label">Please share anything that will help
+                                    prepare for our meeting. &nbsp;*</label>
+
+                                <textarea class="form-control mb-4 answer-input" id="question_70"
+                                    name="question_70"></textarea>
+                            </div>
+                            <fieldset class="form-group Committed-personality">
+                                <label for="">Are you committed personality to be available on your selected time? *</label>
+                                <div>
+                                    <label for="" class="label-input"><input type="radio">
+                                        <div class="Available-on-Time">I'm a committed person,I'll be available on time</div>
+                                    </label>
+                                </div>
+                                <div class="Not-a-Committed-personality-div">
+                                    <label for="" class="label-input"><input type="radio">
+                                        <div class="Not-a-Committed-personality">I'm not a committed personality</div>
+                                    </label>
+                                </div>
+                                <div class="input-for-Other">
+                                    <label for=""><input type="radio"><input type="text" class="Text-input-for-Other" placeholder="Other"></label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="Marketting-fieldset">
+                                <label for="">Have you Done any marketing before? *</label>
+                                <div class="Marketing-radio-button">
+                                    <label for=""><input type="radio">
+                                        <div class="Yes-input">Yes</div>
+                                    </label>
+                                    <label for=""><input type="radio">
+                                        <div class="No-input">No</div>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="By-proceeding">By proceeding,you confirm that you have read and agree to <a
+                                    href="">AI
+                                    WhatsApp's Terms of Use</a>
+                                and
+                                <a href="">Privacy Notice.</a>
+                            </div>
+
+                            <button type="submit" class="schedule-event-btn"><span>Schedule Event</span></button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+            <div href="/?utm_campaign=sign_up&amp;utm_medium=badge&amp;utm_source=invitee" target="_blank"
+                class="VJL48qbQzWENTFAh1Knk e9TS9yoMqqIN2PqBo1QG _i6SG2jlTfccH2ZZblil">
+                <div data-id="branding" class="jWSwi_R_Xl7kPjUhuQoo _igrKj_5lj_5nWQu8DPw">
+                    <div class="V7YfvNqWv0XKYKys7N7K __d5yUqDgBEjoX7J2dql">powered by</div>
+                    <div class="HvybhIo63ZbBJxHh7Ann RK3ps09FjZwzHTaYDakl">AiWhatsapp</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="VJL48qbQzWENTFAh1Knk e9TS9yoMqqIN2PqBo1QG _i6SG2jlTfccH2ZZblil">
+            <div data-id="branding" class="jWSwi_R_Xl7kPjUhuQoo _igrKj_5lj_5nWQu8DPw">
+                <div class="V7YfvNqWv0XKYKys7N7K __d5yUqDgBEjoX7J2dql">powered by</div>
+                <div class="HvybhIo63ZbBJxHh7Ann RK3ps09FjZwzHTaYDakl">AiWhatsapp</div>
+            </div>
+        </div> -->
+    </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ++++++++++functions to make this calender alive+++++++++++
+            // Initial month and year
+            // JavaScript for handling subsequent dynamic updates
+            let currentMonth = 2;
+            let currentYear = 2024;
+
+            let dateRangeStart = '02/12/2024';
+            let dateRangeEnd = '04/27/2024';
+
+            function generateCalendar(month, year, calendarType, startDate, endDate, xDays) {
+                const bookedDates = [
+                    '2024-01-05', '2024-01-10', '2024-01-15', '2024-01-25',
+                    // Add other booked dates as needed
+                ];
+
+                const today = new Date(); // Get current date
+
+                const daysInMonth = new Date(year, month, 0).getDate();
+                const calendarBody = document.getElementById('calendar-body');
+                calendarBody.innerHTML = '';
+
+                const monthTitle = document.getElementById('month-title');
+                monthTitle.textContent = new Date(year, month - 1, 1).toLocaleString('default', { month: 'long', year: 'numeric' });
+
+                const firstDayOfWeek = new Date(year, month - 1, 1).getDay();
+                let dayCount = 1;
+
+                for (let i = 0; i < 6; i++) {
+                    const row = document.createElement('tr');
+                    for (let j = 0; j < 7; j++) {
+                        const cell = document.createElement('td');
+                        if (i === 0 && j < firstDayOfWeek) {
+                            cell.textContent = '';
+                            cell.classList.add('empty');
+                        } else if (dayCount <= daysInMonth) {
+                            const date = `${year}-${String(month).padStart(2, '0')}-${String(dayCount).padStart(2, '0')}`;
+
+                            const button = document.createElement('button');
+                            button.classList.add('day-btn');
+                            button.textContent = dayCount;
+                            button.dataset.date = date;
+                            // Create a span element
+                            // const span = document.createElement('span');
+                            // span.textContent = dayCount;
+
+                            // // Append the span inside the button
+                            // button.appendChild(span);
+
+
+                            const currentDate = new Date(`${year}-${month}-${dayCount}`);
+                            // Check if the date is before today's date
+                            if (currentDate < today) {
+                                button.classList.add('past-date');
+                                button.disabled = true; // Disable selection for past dates
+                            } else {
+                                // Check if it's a working day (Monday to Friday)
+                                const dayOfWeek = currentDate.getDay();
+                                if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+                                    button.classList.add('available');
+                                }
+
+                                // Check if the date is booked
+                                if (bookedDates.includes(date)) {
+                                    button.classList.remove('available');
+                                    button.classList.add('booked');
+                                    button.disabled = true; // Disable booking for this day
+                                }
+                            }
+
+                            if (calendarType === 'within_range') {
+                                console.log('within date range');
+                                // Check if the date is within the specified range
+                                const currentDate = new Date(`${year}-${month}-${dayCount}`);
+                                const startDateObj = new Date(startDate);
+                                const endDateObj = new Date(endDate);
+
+                                if (currentDate >= startDateObj && currentDate <= endDateObj) {
+                                    button.classList.add('within-range');
+                                } else {
+                                    button.classList.add('outside-range');
+                                    button.disabled = true; // Disable selection for dates outside the range
+                                }
+                            } else if (calendarType === 'xdays') {
+                                console.log('x days');
+                                // Check if the date is within x calendar days
+                                const currentDate = new Date(`${year}-${month}-${dayCount}`);
+                                const xDaysFromStartDate = new Date(startDate);
+                                xDaysFromStartDate.setDate(xDaysFromStartDate.getDate() + xDays);
+
+                                if (currentDate <= xDaysFromStartDate) {
+                                    button.classList.add('within-xdays');
+                                } else {
+                                    button.classList.add('outside-xdays');
+                                    button.disabled = true; // Disable selection for dates outside x calendar days
+                                }
+                            }
+
+                            cell.appendChild(button);
+                            dayCount++;
+                        } else {
+                            cell.textContent = '';
+                            cell.classList.add('empty');
+                        }
+                        row.appendChild(cell);
+                    }
+                    calendarBody.appendChild(row);
+                }
+            }
+
+            // Initial calendar generation
+            generateCalendar(currentMonth, currentYear, 'within_range', dateRangeStart, dateRangeEnd);
+
+
+
+            // Function to check if navigation to the next month is allowed based on calendar type and date range
+            function canNavigateToNextMonth(month, year, calendarType, dateRangeStart, dateRangeEnd) {
+                if (calendarType === 'within_range') {
+                    // Implement logic to check if navigation to the next month is allowed within the date range
+                    const isAllowed = checkIfNavigationIsAllowedForDateRange(month, year, 'next', dateRangeEnd);
+                    return isAllowed;
+                }
+
+                // For other calendar types, allow navigation
+                return true;
+            }
+
+            // Function to check if navigation to the previous month is allowed based on calendar type and date range
+            function canNavigateToPreviousMonth(month, year, calendarType, dateRangeStart, dateRangeEnd) {
+                if (calendarType === 'within_range') {
+                    // Implement logic to check if navigation to the previous month is allowed within the date range
+                    const isAllowed = checkIfNavigationIsAllowedForDateRange(month, year, 'previous', dateRangeStart);
+                    return isAllowed;
+                }
+
+                // For other calendar types, allow navigation
+                return true;
+            }
+
+            // Function to check if navigation is allowed within the date range
+            function checkIfNavigationIsAllowedForDateRange(month, year, direction, dateRangeLimit) {
+                // Implement your logic to check if navigation is allowed within the date range
+                // Return true if navigation is allowed, otherwise return false
+
+                const currentDate = new Date();
+                const currentMonth = currentDate.getMonth() + 1; // JavaScript months are zero-based
+                const currentYear = currentDate.getFullYear();
+
+                const dateLimit = new Date(dateRangeLimit);
+
+                if (direction === 'next') {
+                    // const nextDate = new Date(year, month - 1);
+                    // return nextDate <= dateLimit && (year > currentYear || (year === currentYear && month > currentMonth));
+
+                    const nextDate = new Date(year, month); // Adjust month to be zero-based
+                    return nextDate < dateLimit && (year >= currentYear || (year === currentYear && month > currentMonth));
+                } else if (direction === 'previous') {
+                    const previousDate = new Date(year, month - 2);
+                    console.log(previousDate);
+                    console.log(dateLimit);
+                    console.log(month + '' + currentMonth);
+                    // return previousDate > dateLimit && (year < currentYear || (year === currentYear && month < currentMonth));
+                    return year < currentYear || (year === currentYear && month > currentMonth);
+                }
+
+                return false;
+            }
+
+
+            // Event listener for next month button
+            document.getElementById('nextMonth').addEventListener('click', function () {
+
+                const isAllowed = canNavigateToNextMonth(currentMonth, currentYear, 'within_range', dateRangeStart, dateRangeEnd);
+                if (isAllowed) {
+                    currentMonth += 1;
+                    if (currentMonth > 12) {
+                        currentMonth = 1;
+                        currentYear += 1;
+                    }
+                    generateCalendar(currentMonth, currentYear, 'within_range', dateRangeStart, dateRangeEnd);
+                } else {
+                    alert('Cannot navigate beyond the date range.');
+                }
+            });
+
+            // Event listener for previous month button
+            document.getElementById('prevMonth').addEventListener('click', function () {
+
+                const isAllowed = canNavigateToPreviousMonth(currentMonth, currentYear, 'within_range', dateRangeStart, dateRangeEnd);
+                if (isAllowed) {
+                    currentMonth -= 1;
+                    if (currentMonth < 1) {
+                        currentMonth = 12;
+                        currentYear -= 1;
+                    }
+                    generateCalendar(currentMonth, currentYear, 'within_range', dateRangeStart, dateRangeEnd);
+                } else {
+                    alert('Cannot navigate beyond the date range.');
+                }
+            });
+
+            document.addEventListener('click', function (event) {
+                const clickedElement = event.target;
+
+                // Check if the clicked element is a '.day.available'
+                if (clickedElement.classList.contains('day-btn') && clickedElement.classList.contains('available')) {
+
+                    const selectedDate = clickedElement.dataset.date;
+
+                    // Deselect previously selected date
+                    document.querySelectorAll('.day-btn.available').forEach(day => {
+                        day.classList.remove('selected');
+                    });
+
+                    // Highlight the selected date
+                    clickedElement.classList.add('selected');
+                    document.getElementById('left-side-content').classList.add('time-slot-active');
+                    document.getElementById('right-side-heading').classList.add('time-slot-active');
+                    document.getElementById('calender-div').classList.add('time-slot-active');
+                    document.getElementById('left-Side-Inner-div').classList.add('time-slot-active');
+                    document.getElementById('right-Side-Inner-div').classList.add('time-slot-active');
+                    document.getElementById('data-chart-container').classList.add('time-slot-active');
+                    document.getElementById('ssxesgs').classList.add('time-slot-active');
+
+                    generateTimeSlots(selectedDate);
+
+                }
+
+            });
+
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+
+                const day = date.toLocaleDateString('en-US', { weekday: 'long' });
+                const dateOfMonth = date.toLocaleDateString('en-US', { day: 'numeric' });
+                const month = date.toLocaleDateString('en-US', { month: 'long' });
+
+                const year = date.toLocaleDateString('en-US', { year: 'numeric' });
+
+                return { day, dateOfMonth, month, year };
+            }
+
+            let timeSlotsForSelectedDay;
+            // Function to generate working time slots and mark booked times
+            function generateTimeSlots(selectedDate) {
+                console.log('time slot clicked');
+                console.log(selectedDate);
+
+                // get slots form database
+                fetch('/get-slots?selectedDate=' + encodeURIComponent(selectedDate) + '&eventId=' + encodeURIComponent(3) + '&eventDuration=' + encodeURIComponent('30 min'))
+                    .then(response => response.json())
+                    .then(data => {
+                        // Process the response
+                        // console.log(data);
+                        timeSlotsForSelectedDay = data.event_slots;
+                        console.log(timeSlotsForSelectedDay);
+
+                        // Generate working hours for the selected day
+                        const workingHours = [];
+                        timeSlotsForSelectedDay.forEach(slot => {
+                            workingHours.push(slot.start);
+                        });
+
+                        let previousSlot = null; // Variable to keep track of the previously selected slot
+
+                        workingHours.forEach(slot => {
+                            const slotDiv = document.createElement('div');
+                            slotDiv.classList.add('time-slot');
+
+                            const slotTimeDiv = document.createElement('div');
+                            slotTimeDiv.classList.add('slot-time');
+                            slotTimeDiv.textContent = slot;
+                            slotDiv.appendChild(slotTimeDiv);
+
+                            if (bookedTimes.includes(slot)) {
+                                slotDiv.classList.add('booked');
+                                slotDiv.classList.add('d-none');
+                            } else {
+                                slotDiv.addEventListener('click', function (event) {
+                                    // Check if there's a previously selected slot and remove its properties
+
+                                    if (previousSlot !== null) {
+                                        previousSlot.classList.remove('selected');
+                                        previousSlot.firstElementChild.classList.remove('disabled-slot-btn');
+                                        const previousBtn = previousSlot.querySelector('.action-btn');
+                                        if (previousBtn) {
+                                            previousBtn.remove();
+                                        }
+                                    }
+
+                                    // Handle logic when a time slot is clicked (e.g., booking action)
+                                    // For demonstration purposes, just toggle the 'selected' class
+                                    slotDiv.classList.toggle('selected');
+
+
+
+                                    // Check if the button already exists, if not, create it
+                                    let actionBtn = slotDiv.querySelector('.action-btn');
+                                    let selectedTimeSlot = slotDiv.querySelector('.slot-time');
+                                    // let selectedTimeSlot = document.querySelector('.time-slot.selected');
+                                    if (!actionBtn) {
+                                        selectedTimeSlot.classList.add('disabled-slot-btn');
+                                        actionBtn = document.createElement('button');
+                                        actionBtn.classList.add('action-btn');
+                                        actionBtn.textContent = 'Next';
+
+                                        // Add click event for booking action
+                                        actionBtn.addEventListener('click', function (event) {
+                                            event.stopPropagation();
+
+                                            // Get the selected date
+                                            const selectedDate = document.querySelector('.day-btn.selected').dataset.date;
+
+                                            // Get the selected time
+                                            const selectedTime = slotTimeDiv.textContent;
+
+                                            // Redirect to the next page with the selected date and time
+                                            // Get the current URL
+                                            const currentUrl = window.location.href;
+
+                                            // Create a URLSearchParams object with the current URL
+                                            const urlParams = new URLSearchParams(currentUrl);
+                                            console.log(urlParams);
+
+                                            // Get the value of the 'event_link' parameter from the URL
+                                            // const eventLinkValue = urlParams.get('event_link');
+                                            const eventLinkValue = "30 min";
+
+                                            // Generate the URL dynamically using JavaScript
+                                            const durationValue = '30min';
+                                            const bookingPageUrl = `https://tool.aiwhatsapp.in/calender/3/:eventLink/30min/:date/:time`
+                                                .replace(':eventLink', eventLinkValue)
+                                                .replace(':date', selectedDate)
+                                                .replace(':time', selectedTime);
+                                            // console.log(bookingPageUrl);
+                                            window.location.href = bookingPageUrl;
+
+                                        });
+
+                                        // Append the button after the time slot time div
+                                        slotDiv.appendChild(actionBtn);
+                                    }
+
+                                    // Update the previous slot to the currently clicked slot
+                                    previousSlot = slotDiv;
+                                });
+                            }
+
+                            timeSlotsContainer.appendChild(slotDiv);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+
+                const bookedTimes = [
+                    // '09:00 AM', '10:00 AM', '01:00 PM', '02:00 PM',
+                    // Add other booked times as needed
+                ];
+                const formatedDate = formatDate(selectedDate);
+                // const timeSlotsDateContainer = document.querySelector('.time-slots-date');
+                const timeSlotsContainer = document.querySelector('.time-slots');
+                const timeSlotsDiv = document.querySelector('#time-slots-div');
+                const timezoneForPhone = document.querySelector('.xyadsss');
+                const timezoneSelecteDay = document.querySelector('#selectedDaySES');
+                const timezoneSelectedDate = document.querySelector('#selectedDateSES');
+                const outerDiv = document.getElementById('Outer-div div');
+                const showSeletTest = document.getElementById('showSeletText');
+                showSeletTest.classList.remove('hide');
+                outerDiv.classList.add('time-slot-active');
+                timezoneForPhone.classList.add('time-slot-active');
+                timeSlotsDiv.classList.remove('hide');
+                timeSlotsContainer.innerHTML = '';
+                // timeSlotsDateContainer.innerHTML = `<h3 class="selected-date pb-0 d-none d-md-block" >${formatedDate.day}</h3>`;
+                const selectedDayDateContainer = document.querySelector('.selected-day-date');
+                selectedDayDateContainer.innerHTML = `<span class="selected-date d-none d-md-block Month-Name" >${formatedDate.day}  ${formatedDate.month}  ${formatedDate.dateOfMonth}</span>`;
+
+                timezoneSelecteDay.innerHTML = formatedDate.day;
+                timezoneSelectedDate.innerHTML = formatedDate.month + ' ' + formatedDate.dateOfMonth + ', ' + formatedDate.year;
+
+            }
+            // +++++++++++++End of this function++++++++
+
+            var chartButtons = document.querySelectorAll('.Chart-button');
+            var rightSideInnerDiv = document.querySelector('.Right-Side-Inner-div');
+
+            chartButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    chartButtons.forEach(function (btn) {
+                        btn.classList.remove('clicked');
+                    });
+                    this.classList.add('clicked');
+                    var dateAndTimeDiv = rightSideInnerDiv.querySelector('.Date-and-Time');
+                    if (dateAndTimeDiv) {
+                        dateAndTimeDiv.style.display = dateAndTimeDiv.style.display === 'none' ? 'block' : 'none';
+                    }
+                });
+            });
+            const currentDate = document.querySelector('.Month-Name');
+            let date = new Date(),
+                currYear = date.getFullYear(),
+                currMonth = date.getMonth();
+
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            const renderCalendar = () => {
+                let LastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+                currentDate.innerText = `${months[currMonth]} ${currYear}`;
+
+            };
+
+            const updateCalendar = () => {
+                renderCalendar();
+            };
+
+            renderCalendar();
+
+            // const nextMonthButton = document.querySelector('.Arrow-Icon-Right');
+            // const prevMonthButton = document.querySelector('.Arrow-Icon-Left');
+
+            // nextMonthButton.addEventListener('click', () => {
+            //     currMonth++;
+            //     if (currMonth > 11) {
+            //         currMonth = 0;
+            //         currYear++;
+            //     }
+            //     updateCalendar();
+            //     prevMonthButton.addEventListener('click', prevMonthButtonClickHandler);
+            // });
+
+            // const prevMonthButtonClickHandler = () => {
+            //     currMonth--;
+            //     if (currMonth < 0) {
+            //         currMonth = 11;
+            //         currYear--;
+            //         if (currYear === 2024 && currMonth === 0) {
+            //             prevMonthButton.removeEventListener('click', prevMonthButtonClickHandler);
+            //         }
+            //     }
+            //     updateCalendar();
+            // };
+
+            // prevMonthButton.addEventListener('click', prevMonthButtonClickHandler);
+
+            // renderCalendar();
+        });
+        var loader = document.querySelector(".Container");
+        function myFunction() {
+            loader.style.display = "none";
+        }
+        myFunction();
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
