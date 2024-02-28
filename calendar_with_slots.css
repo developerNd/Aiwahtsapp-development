@@ -685,6 +685,8 @@ border-radius:4px;
 @media screen and (max-width:1440px) {
     .logo {
         margin-left: 7%;
+        height: 65px;
+        width: 65px;
     }
 }
 
@@ -741,10 +743,8 @@ border-radius:4px;
         max-width: 95%;
         width: 95%;
         padding: 1rem 2rem;
-        margin: 2rem;
         position: relative;
         min-width: 0px;
-       
     }
 
     .Outer-div.time-slot-active {
@@ -758,9 +758,10 @@ border-radius:4px;
     }
 
     .Left-Side-Inner-div {
-        width: 65%;
-        border: none;
+        width: 100%;
         margin: auto;
+        border-bottom: 1px solid #d1cfcf;
+        border-radius: 0px;
     }
 
     .Right-Side-Inner-div {
@@ -786,7 +787,7 @@ border-radius:4px;
 
     .span-45-min {
         max-width: 400px;
-        padding: 0 30px;
+        padding: 0 8px;
     }
 
     .svg-45-min {
@@ -812,17 +813,15 @@ border-radius:4px;
     }
 
     .Time-zone {
-        text-align: center;
+        
+        padding-bottom: 40px;
     }
 
-    .Indian-standard-time {
-        display: flex;
-        justify-content: center;
+    #ssxesgs {
+        padding-bottom: 0px;
     }
 
-    .Indian-standard-time-button {
-        justify-content: center;
-    }
+
 
     .Cookie-Report {
         position: absolute;
@@ -836,29 +835,36 @@ border-radius:4px;
 
     .Indian-standard-time-button {
         width: 100%;
+        margin-left: 5%;
     }
 
     /*.Date-chart-Time-zone {*/
     /* height:400px;*/
     /*}*/
     .para-Left-div {
-        padding: 0rem 0rem 0rem 0rem;
+        padding: 0rem 19rem 0rem 19rem;
     }
 
     .Select-a-Date-and-Time {
-        margin-left: 22%;
+        margin-left: 19%;
     }
 
     .Month-Year {
         margin-left: 2%;
     }
 
-    .Time-zone-para {
-        padding: 0rem 26rem 0rem 0rem
-    }
 
     .Indian-standard-time {
         padding: 0rem;
+        width: 55%;
+    }
+
+    .Time-button1 {
+        width: 222px;
+    }
+
+    .Date-and-Time {
+        margin-left: 3.9%;
     }
 }
 
@@ -880,27 +886,49 @@ border-radius:4px;
         text-align: center;
     }
 
+    /* 
     .Outer-div.time-slot-active {
         max-width: 100% !important;
         padding: 0;
-    }
+       
+     
+    } */
 
     .Outer-div {
         width: 100%;
-        padding: 1rem 2rem;
-        margin: 0rem;
-        max-width: 100%;
+        padding: 0px;
+        margin-top: 0px;
+        max-width: 100% !important;
+        border: none;
+        margin-bottom: 0px;
+        box-shadow: none;
+    }
+
+    .Right-Side-Inner-div {
+        width: 100% !important;
+        padding: 0;
 
     }
 
-    .Right-Side-Inner-div.time-slot-active {
+    /* .Right-Side-Inner-div.time-slot-active {
         width: 100%;
         padding: 0;
+    } */
+
+    /* .Left-Side-Inner-div {
+        width: 80%;
+    } */
+    .Left-Side-Inner-div {
+        width: 60%;
+        margin: auto;
+        border: none;
     }
 
-    .Left-Side-Inner-div {
-        width: 80%;
-    }
+    /* .Left-Side-Inner-div.time-slot-active {
+        width: 60%;
+        margin: auto;
+        padding-bottom: 0px;
+    } */
 
     .time-slots {
         margin-bottom: 2rem;
@@ -919,16 +947,26 @@ border-radius:4px;
 
     .calender-div {
         height: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    .img-heading-para-container.time-slot-active,
-    .Select-a-Date-and-Time.time-slot-active,
-    .data-chart-container.time-slot-active {
+    .img-heading-para-container,
+    .Select-a-Date-and-Time,
+    .data-chart-container {
         display: none;
     }
 
+    /* .img-heading-para-container.time-slot-active,
+    .Select-a-Date-and-Time.time-slot-active,
+    .data-chart-container.time-slot-active {
+        display: none;
+    } */
+
     .Date-chart-Time-zone {
-        flex-direction: column;
+
+        flex-direction: column-reverse;
+
     }
 
     #backToCalenderSES {
@@ -948,13 +986,18 @@ border-radius:4px;
         font-size: 24px;
     }
 
-    #selectedDaySES {
+    /* #selectedDaySES {
         font-size: 2.5rem;
-    }
+    } */
 
     #selectedDateSES {
-        font-size: 1.5rem;
+
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
     }
 
     .disabled-slot-btn,
@@ -968,14 +1011,24 @@ border-radius:4px;
 
     .Time-zone {
         border-bottom: 1px solid #dee2e6 !important;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
     .written-IST {
         width: 50%;
     }
 
-    .xyadsss.time-slot-active {
+    /* .xyadsss.time-slot-active {
         display: block !important;
+    } */
+    .xyadsss {
+        display: block !important;
+    }
+
+    .Time-zone-para {
+        padding: 0rem 9.5rem;
+
     }
 }
 
