@@ -89,17 +89,12 @@ html {
 }
 
 .Outer-div {
-    /* height: 90%; */
     min-width: 50%;
-    /* border-color: rgb(242, 241, 241); */
     display: flex;
     flex-direction: row;
-    /*align-items: center;*/
-    /* border-radius: 5px; */
     border: 1px solid rgba(26, 26, 26, 0.1);
     border-radius: 8px;
     box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
-    /*width: 65%;*/
     margin: auto;
     margin-top: 66px;
     margin-bottom: 30px;
@@ -107,6 +102,8 @@ html {
     min-height: 550px;
     width: 100%;
     flex-wrap: wrap;
+    background-color: white;
+    position: relative;
 }
 
 .Outer-div.time-slot-active {
@@ -115,18 +112,12 @@ html {
 
 .Left-Side-Inner-div {
     background-color: white;
-    /*height: 100%;*/
     flex: 1;
     border-radius: 10px 0px 0px 10px;
-    /* border: solid rgb(240, 240, 240);
-         border-width: 1px;
-         border-right-width: 0px; */
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding-bottom: 3rem;
-    width: 50%;
-    min-width: 300px;
 }
 
 .Left-Side-Inner-div.time-slot-active {
@@ -146,12 +137,10 @@ html {
 }
 
 .logo {
-    height: 70.8%;
-    width: 16.26%;
     max-height: 65px;
     max-width: 65px;
     border-radius: 50%;
-    margin-left: 7.6%;
+
 }
 
 .Harshit {
@@ -166,7 +155,6 @@ html {
     font-size: 2.8rem;
     color: #1A1A1A;
     margin-top: 0.5%;
-    /*margin-bottom: 24px;*/
     font-weight: bolder;
     padding: 0rem 1rem 0rem 3rem;
     font-family: 'Jost', sans-serif;
@@ -179,7 +167,6 @@ html {
     display: flex;
     align-items: center;
     margin-top: 2%;
-    /*justify-content: center;*/
     margin-bottom: 20px;
 }
 
@@ -225,7 +212,6 @@ html {
     border: none;
     background-color: white;
     color: #0069FF;
-    /*padding: 0rem 1rem 0rem 3rem;*/
     font-weight: bolder;
     font-family: 'Jost', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -239,7 +225,6 @@ html {
 .Report-abuse {
     color: #1A1A1A;
     font-family: sans-serif;
-    /*padding: 0rem 3rem 0rem 1rem;*/
     margin-right: 30px;
     margin-left: 10px;
     font-size: 14px;
@@ -248,7 +233,6 @@ html {
 
 .Right-Side-Inner-div {
     background-color: white;
-    /*height: 100%;*/
     max-width: 50%;
     flex: 1;
     border-radius: 0px 10px 10px 0px;
@@ -276,7 +260,6 @@ html {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 20px;
-    text-align: left;
     padding-left: 32px;
 }
 
@@ -286,15 +269,13 @@ html {
 }
 
 .Date-chart {
-    /* height: 100%; */
     width: auto;
     margin: 0 19px;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 .Month-Year {
-    /*margin: 2px 6px 10px 13px;*/
     height: 11%;
     display: flex;
     justify-content: center;
@@ -304,17 +285,6 @@ html {
     margin: 6px 6px 15px;
 }
 
-/* .Month-Year {
-    /* margin: 2px 6px 10px 13px; */
-/* height: 11%; */
-/* display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: row; */
-/* width: 100%; */
-/* margin: 6px 6px 15px;
-    gap: 10px;
-}  */
 
 .Arrow-Icon-Left {
     height: 40px;
@@ -415,6 +385,7 @@ html {
 .Time-zone {
     height: 100%;
     width: 100%;
+    padding: 0px 25px;
 }
 
 .Time-zone-para {
@@ -422,13 +393,9 @@ html {
     font-weight: bolder;
     font-size: 1.5rem;
     font-family: sans-serif;
-    padding: 0rem 2.3rem;
     margin-bottom: 3px;
 }
 
-.Indian-standard-time {
-    padding: 0rem 3.2rem;
-}
 
 .Indian-standard-time-button {
     border: none;
@@ -437,10 +404,10 @@ html {
     flex-direction: row;
     height: 30px;
     width: 100%;
-    /*margin-left: 10%;*/
     align-items: center;
     font-size: 14px;
     padding: .5rem;
+    gap: 5px;
 }
 
 .Indian-standard-time-button:hover {
@@ -449,8 +416,6 @@ html {
 }
 
 .written-IST {
-    /*height: 64%;*/
-    width: 45.4%;
     font-weight: lighter;
     font-family: sans-serif;
 }
@@ -492,13 +457,13 @@ html {
 }
 
 .slot-time {
-    color: #0069E6;
+    color: var(--primary-color, rgb(0, 105, 255));
     font-weight: 700;
     font-size: 16px;
 }
 
 .time-slot:hover {
-    border: 2px solid #0069E6;
+    border: 2px solid var(--primary-color, rgb(0, 105, 255));
 }
 
 .disabled-slot-btn {
@@ -545,9 +510,8 @@ html {
 /*Branding section */
 .VJL48qbQzWENTFAh1Knk {
     position: absolute;
-    top: 62px;
-    ;
-    right: 235px;
+    top: -6px;
+    right: -6px;
     z-index: 1;
     overflow: hidden;
     width: 105px;
@@ -628,15 +592,7 @@ html {
 
 @media screen and (max-width:1440px) {
     .logo {
-        margin-left: 7%;
-        height: 65px;
-        width: 65px;
-    }
-
-    .VJL48qbQzWENTFAh1Knk {
-        position: absolute;
-        top: 60px;
-        right: 316px;
+        margin-left: 7.8%;
     }
 }
 
@@ -645,28 +601,13 @@ html {
         height: 38px;
         width: 38px;
     }
-
-    .written-IST {
-        width: 48%;
-    }
-
     .Arrow-Icon-Right {
         width: 38px;
         height: 38px;
     }
 
-    .logo {
-        margin-left: 7.8%;
-    }
-
     .Outer-div.time-slot-active {
         max-width: 92% !important;
-    }
-
-    .VJL48qbQzWENTFAh1Knk {
-        position: absolute;
-        top: 62px;
-        right: 106px;
     }
 }
 
@@ -675,15 +616,9 @@ html {
 @media screen and (max-width:768px) {
     .Outer-div {
         flex-direction: column;
-        max-width: 95%;
+        max-width: 680px;
         width: 95%;
         padding: 1rem 2rem;
-        margin: 2rem;
-        position: relative;
-    }
-    .page-wraper {
-       
-        background-color: white;
     }
 
     .Outer-div.time-slot-active {
@@ -703,13 +638,6 @@ html {
         border-radius: 0px;
     }
 
-    .Right-Side-Inner-div {
-        width: 100%;
-        border: none;
-        padding-bottom: 2rem;
-        max-width: 100%;
-    }
-
     .logo {
         margin-left: 0%;
     }
@@ -718,24 +646,23 @@ html {
         padding: 0px;
     }
 
-    .Business-Growth-h1 {
-        padding: 0px;
-        padding-right: calc((100% - 440px)/2);
-        padding-left: calc((100% - 440px)/2);
+    .Right-Side-Inner-div {
+        width: 100%;
+        border: none;
+        max-width: 100%;
     }
 
     .span-45-min {
-        max-width: 400px;
-        padding: 0 30px;
+        padding: 0 8px;
     }
 
     .svg-45-min {
-        /*margin:auto;*/
         justify-content: center;
     }
 
     .img-heading-para-container {
-        padding-top: 0px;
+        padding-top: 1.5rem;
+        width: 100%;
     }
 
     .img-heading-container {
@@ -747,64 +674,29 @@ html {
         width: 38px;
     }
 
-    .written-IST {
-        width: 40%;
-    }
-
-    .Time-zone {
-        text-align: center;
-    }
-
-    .Indian-standard-time {
-        display: flex;
-        justify-content: center;
-    }
-
-    .Indian-standard-time-button {
-        justify-content: center;
-        width: 55%;
-        margin-right: 15%;
-        gap: 2px;
-    }
 
     .Cookie-Report {
         position: absolute;
         bottom: 0px;
         display: flex;
         width: 100%;
-        /*margin-left: -2rem;*/
         padding: 1rem 2rem;
         left: 0;
     }
 
-
-    /*.Date-chart-Time-zone {*/
-    /* height:400px;*/
-    /*}*/
     .para-Left-div {
         padding: 0rem 19rem 0rem 19rem;
     }
 
-    .Select-a-Date-and-Time {
-        margin-left: 22%;
+    .Select-a-Date-and-Time h2 {
+
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
-    .Month-Year {
-        margin-left: 2%;
-    }
-
-    .Time-zone-para {
-        padding: 0rem 26rem 0rem 0rem
-    }
-
-    .Indian-standard-time {
-        padding: 0rem;
-    }
-
-    .VJL48qbQzWENTFAh1Knk {
-        position: absolute;
-        top: -6px;
-        right: -6px;
+    .Time-zone {
+        padding: 0px 143px;
     }
 }
 
@@ -820,7 +712,7 @@ html {
 
     .page-wraper {
         width: 100%;
-        
+
     }
 
     .Business-Growth-h1 {
@@ -910,88 +802,57 @@ html {
         width: 48%;
     }
 
-    .Right-Side-Inner-div {
-        width: 100%;
-    }
-
-    /* .Time-zone {
-        border-bottom: 1px solid #dee2e6 !important;
-    } */
-
-    .written-IST {
-        width: 50%;
-    }
+ 
 
     .xyadsss.time-slot-active {
         display: block !important;
     }
 
     .svg-45-min {
-        /*margin:auto;*/
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 340px;
+        padding: 0 23px;
         justify-content: flex-start;
-        padding: 0rem 0rem 0rem 4.5rem;
     }
+
     .span-45-min {
         padding: 0px 8px;
     }
+
     .para-Left-div {
-        padding: 0rem 6rem 0rem 4.5rem;
+        max-width: 340px;
+        padding: 0 23px;
+        margin: 0 auto;
     }
-    .Select-a-Date-and-Time {
-        margin: auto;
+
+    .Select-a-Date-and-Time h2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px 0px 0px;
     }
-    .Select-a-Date-and-Time h2{
-        padding: 1rem 0rem 0rem 9rem;
-    }
-    .Indian-standard-time-button {
-       
-        width: 75%;
-       
-    }
+  
+        .Time-zone {
+            padding: 0px 0px;
+        }
+
+
     .Cookie-Report {
         padding: 1rem 0rem;
-        
+
     }
-    .VJL48qbQzWENTFAh1Knk {
-        position: fixed;
-        top: -6px;
-        right: -6px;
-    }
-    .img-heading-para-container {
-        width: 100%;
-        padding-top: 1rem;
-    }
-    .Business-Growth-h1 {
-    
-        padding: 0px 30px;
-    }
+
 }
+
 @media screen and (max-width:425px) {
-    .svg-45-min {
-        /*margin:auto;*/
-        justify-content: flex-start;
-        padding: 0rem 4rem 0rem 2rem;
-    }
-    .para-Left-div {
-        padding: 0rem 4rem 0rem 2rem;
-    } 
-    .Select-a-Date-and-Time h2 {
-        padding: 1rem 0rem 0rem 7rem;
-    }
-    .Time-zone-para {
-        padding: 0rem 15rem 0rem 1rem;
-    }
-    .Indian-standard-time-button {
-        width: 100%;
-        margin-right: 0%;
-    }
 }
 
 @media screen and (max-width:375px) {
     .img-heading-para-container {
         width: 100%;
-       padding-top: 2.5rem;
+        padding-top: 2.5rem;
     }
+
     .Cookie-Report {
         margin-left: 1rem;
     }
@@ -999,17 +860,6 @@ html {
 }
 
 @media screen and (max-width:320px) {
-    .para-Left-div {
-        width: 100%;
-    }
-
-    .written-IST {
-        width: 55%;
-    }
-    .Select-a-Date-and-Time h2 {
-        padding: 1rem 0rem 0rem 4rem;
-    }
- 
 }
 
 ::-webkit-scrollbar-track {

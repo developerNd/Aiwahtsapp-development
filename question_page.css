@@ -35,6 +35,7 @@ html {
     flex-wrap: wrap;
     min-width: 900px;
     max-width: 1060px;
+    position: relative;
 }
 
 .Outer-div.time-slot-active {
@@ -88,18 +89,24 @@ html {
 .Arrow-Icon-Right:hover {
     background-color: #d5e5fe;
 }
-.Arrow-Image-Container{
+
+.Arrow-Image-Container {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
+
 .img-heading-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-right: 3%;
 }
-
+.Back-Arrow-Logo-Container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 .logo {
 
     height: 65px;
@@ -288,7 +295,7 @@ p {
 }
 
 .calender-div {
-    width: 70%;
+    max-width: 400px;
 }
 
 button,
@@ -394,7 +401,7 @@ button:not(:disabled) {
     padding-left: 3rem;
     display: flex;
     gap: 10px;
-    padding-bottom: 1%;
+    padding-bottom: 3%;
     padding-right: 2rem;
 }
 
@@ -538,8 +545,8 @@ button:not(:disabled) {
 
 .VJL48qbQzWENTFAh1Knk {
     position: absolute;
-    top: 63px;
-    right: 100px;
+    top: -6px;
+    right: -6px;
     z-index: 1;
     overflow: hidden;
     width: 105px;
@@ -586,10 +593,12 @@ button:not(:disabled) {
     color: #fff;
     font-size: 14px;
 }
+@media screen and (max-width:1440px) {
+}
 
 @media screen and (max-width:1024px) {
     .Outer-div {
-        max-width: 92% !important;
+        max-width: 90% !important;
     }
 }
 
@@ -603,51 +612,52 @@ button:not(:disabled) {
         border-right: none;
         width: auto;
         min-height: 0px;
-        border-radius: 10px 10px 0px 10px;
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 1px solid rgba(26, 26, 26, 0.1);
     }
+
     .img-heading-para-container {
-        padding-top: 2.5rem;
         height: 91.5%;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
+
     .img-heading-container {
         padding: 0px;
         align-items: center;
     }
+
     .Business-Growth-h1 {
         padding: 0px;
     }
+
     .logo {
         margin-left: 0px;
     }
+
     .Harshit {
-     
-     padding:0px; 
+
+        padding: 0px;
     }
+
     .svg-45-min {
         justify-content: center;
         padding-top: 0px;
     }
-    .Arrow-Image-Container {
-        flex-direction: row;
-        gap: 25px;
-        justify-content: space-between;
-    width: 90%;
-    margin-right: 75%;
-    }
+
 
     .right-content {
         align-items: center;
         width: 100%;
         display: flex;
         flex-direction: column;
-
+        padding: 25px 29px 38px 29px;
     }
+
     .para-Left-div {
         padding: 0rem 19rem 0rem 19rem;
     }
+
     .Cookie-Report {
         position: absolute;
         bottom: 0px;
@@ -657,5 +667,74 @@ button:not(:disabled) {
         padding: 1rem 2rem;
         left: 0;
     }
-  
+    .Back-Arrow-Logo-Container{
+        flex-direction:row;
+        justify-content: space-between;
+        width: 100%;
+    padding-left: 3.5%;
+    padding-right: 45%
+    }
+    .Arrow-Icon-Right-div {
+        margin-left: 0px;
+    }
+    .Day-Time-detail-Container{
+
+    }
+    .top-text {
+        width: 64%;
+        /* max-width: 400px; */
+    }
+    .Form-Container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:500px) {
+    body {
+        width: fit-content;
+    }
+    .Outer-div {
+       margin-top: 0px;
+       border: none;
+    box-shadow: none;
+    margin-bottom: 0px;
+    }
+    .logo,.Harshit,.para-Left-div,
+    .Select-a-Date-and-Time,
+    .data-chart-container {
+        display: none;
+    }
+    
+    .img-heading-container {
+        flex-direction: row;
+    }
+    .Back-Arrow-Logo-Container {
+        width: 10%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .Business-Growth-h1 {
+        padding: 0px 60px;
+    }
+    .svg-45-min {
+        justify-content:flex-start;
+    }
+    .top-text {
+        width: 100%;
+        max-width: 400px;
+    }
+    .right-content {
+        padding-bottom: 40px;
+    }
+    .Cookie-Report {
+
+        padding: 0rem 0rem;
+    }
+    .schedule-event-btn {
+        width: 100%;
+    }
+}
+@media screen and (max-width:425px) {
+
 }

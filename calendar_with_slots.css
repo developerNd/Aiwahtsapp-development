@@ -89,26 +89,21 @@ html {
 }
 
 .Outer-div {
-    /* height: 90%; */
-    /* min-width: 50%; */
-    /* border-color: rgb(242, 241, 241); */
     display: flex;
     flex-direction: row;
-    /*align-items: center;*/
-    /* border-radius: 5px; */
     border: 1px solid rgba(26, 26, 26, 0.1);
     border-radius: 8px;
     box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
-    /*width: 65%;*/
     margin: auto;
     margin-top: 66px;
-    margin-bottom: 27px;
-    /* max-width: 800px; */
+    margin-bottom: 30px;
     min-height: 550px;
     width: 100%;
     flex-wrap: wrap;
     min-width: 900px;
     max-width: 1060px;
+    background-color: white;
+    position: relative;
 }
 
 .Outer-div.time-slot-active {
@@ -117,17 +112,11 @@ html {
 
 .Left-Side-Inner-div {
     background-color: white;
-    /*height: 100%;*/
-    /* flex: 1; */
     border-radius: 10px 0px 0px 10px;
-    /* border: solid rgb(240, 240, 240);
-         border-width: 1px;
-         border-right-width: 0px; */
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding-bottom: 3rem;
-    /* width: 50%; */
     min-width: 300px;
     width: 35%;
 }
@@ -162,7 +151,6 @@ html {
     color: #1A1A1A9C;
     font-size: 1.6rem;
     font-weight: 700;
-    /* font-weight: bold; */
     margin-top: 2%;
     padding: 0rem 1rem 0rem 3rem;
 }
@@ -171,8 +159,6 @@ html {
     font-size: 2.8rem;
     color: #1A1A1A;
     margin-top: 0.5%;
-    /*margin-bottom: 24px;*/
-    /* font-weight: bolder; */
     padding: 0rem 1rem 0rem 3rem;
     font-family: 'Jost', sans-serif;
     line-height: 32px;
@@ -186,7 +172,6 @@ html {
     display: flex;
     align-items: center;
     margin-top: 2%;
-    /*justify-content: center;*/
     margin-bottom: 20px;
 }
 
@@ -218,7 +203,7 @@ html {
 }
 
 .Cookie-Report button:hover {
-    text-decoration: underline solid rgb(0,105,255) 1px;
+    text-decoration: underline solid rgb(0, 105, 255) 1px;
 
 }
 
@@ -231,8 +216,7 @@ html {
 #Cookie-settings-button {
     border: none;
     background-color: white;
-    color:  rgb(0,105,255);
-    /*padding: 0rem 1rem 0rem 3rem;*/
+    color: rgb(0, 105, 255);
     font-weight: bolder;
     font-family: 'Jost', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -246,7 +230,6 @@ html {
 .Report-abuse {
     color: #1A1A1A;
     font-family: sans-serif;
-    /*padding: 0rem 3rem 0rem 1rem;*/
     margin-right: 30px;
     margin-left: 10px;
     font-size: 14px;
@@ -255,8 +238,6 @@ html {
 
 .Right-Side-Inner-div {
     background-color: white;
-    /*height: 100%;*/
-    /* max-width: 50%; */
     flex: 1;
     border-radius: 0px 10px 10px 0px;
     border: solid rgb(240, 240, 240);
@@ -286,7 +267,6 @@ html {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 20px;
-    /* margin-left: 4%; */
     text-align: left;
     padding-left: 32px;
     padding-right: 60px;
@@ -298,16 +278,17 @@ html {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    /* padding: 25px 0 0; */
 }
 
 .Date-chart {
-    /* height: 100%; */
     width: auto;
-    /* margin: 0 19px; */
     display: flex;
     flex-wrap: wrap;
     padding-top: 1%;
+}
+.Date-chart.time-slot-active{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .Month-Year {
@@ -315,19 +296,7 @@ html {
     align-items: center;
     margin: 0px 6px 15px;
     justify-content: center;
- }
-
-/* .Month-Year {
-    /* margin: 2px 6px 10px 13px; */
-/* height: 11%; */
-/* display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: row; */
-/* width: 100%; */
-/* margin: 6px 6px 15px;
-    gap: 10px;
-}  */
+}
 
 .Arrow-Icon-Left {
     height: 40px;
@@ -343,7 +312,7 @@ html {
     font-size: 1.6rem;
     color: #1A1A1A;
     width: 125px;
-    height: 24px; 
+    height: 24px;
     font-weight: 400;
 }
 
@@ -356,7 +325,7 @@ html {
     border: none;
     width: 40px;
     height: 40px;
-    background-color:  var(--primary-color-level4, rgba(0,105,255,0.065));
+    background-color: var(--primary-color-level4, rgba(0, 105, 255, 0.065));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -400,7 +369,7 @@ html {
 .available {
     height: 40px;
     width: 40px;
-    background-color: var(--primary-color-level4, rgba(0,105,255,0.065));
+    background-color: var(--primary-color-level4, rgba(0, 105, 255, 0.065));
     border-radius: 50%;
     border: none;
     margin-right: 7px;
@@ -417,7 +386,7 @@ html {
 }
 
 .available.selected {
-    background-color:  var(--primary-color, rgb(0,105,255));
+    background-color: var(--primary-color, rgb(0, 105, 255));
     color: #fff;
 }
 
@@ -428,6 +397,7 @@ html {
 .Time-zone {
     height: 100%;
     width: 100%;
+    padding: 0px 25px;
 }
 
 .Time-zone-para {
@@ -435,12 +405,11 @@ html {
     font-weight: bolder;
     font-size: 1.5rem;
     font-family: sans-serif;
-    padding: 0rem 1.2rem;
     margin-bottom: 3px;
 }
-
-.Indian-standard-time {
-    padding: 0rem 3.2rem;
+.Indian-standard-time{
+    width: 50%;
+    
 }
 
 .Indian-standard-time-button {
@@ -449,11 +418,11 @@ html {
     display: flex;
     flex-direction: row;
     height: 30px;
-    width: 50%;
-    /*margin-left: 10%;*/
+    width: 100%;
     align-items: center;
     font-size: 14px;
     padding: .5rem;
+    gap: 5px;
 }
 
 .Indian-standard-time-button:hover {
@@ -462,8 +431,6 @@ html {
 }
 
 .written-IST {
-    /*height: 64%;*/
-    width: 45.4%;
     font-weight: lighter;
     font-family: sans-serif;
 }
@@ -471,7 +438,8 @@ html {
 .earth-svg {
     margin-left: 5px;
 }
-#ssxesgs{
+
+#ssxesgs {
     padding-bottom: 45px;
 }
 
@@ -500,7 +468,7 @@ html {
     width: 222px;
     background-color: white;
     margin-bottom: 1%;
-    border:1px solid  rgba(0,105,255,0.5);
+    border: 1px solid rgba(0, 105, 255, 0.5);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -508,13 +476,13 @@ html {
 }
 
 .slot-time {
-    color:var(--primary-color, rgb(0,105,255));
-    font-weight:700;
-    font-size:16px;
+    color: var(--primary-color, rgb(0, 105, 255));
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .time-slot:hover {
-    border:2px solid var(--primary-color, rgb(0,105,255));
+    border: 2px solid var(--primary-color, rgb(0, 105, 255));
 }
 
 .disabled-slot-btn {
@@ -558,9 +526,8 @@ html {
 /*Branding section */
 .VJL48qbQzWENTFAh1Knk {
     position: absolute;
-   
-    top: 62px;;
-    right: 103px;
+    top: -6px;
+    right: -6px;
     z-index: 1;
     overflow: hidden;
     width: 105px;
@@ -638,56 +605,12 @@ html {
     margin-top: 1rem;
     margin-left: -10px;
 }
-.Date-and-Time
-{
-    width: auto;
-    height:100%;
-    margin-left: 3.9%;
-}
-.Date-and-Time h3{
-    font-family:sans-serif;
-    font-size:16px;
-    color: #1A1A1A;
-    width:180px;
-    height:24px;
-    font-weight: lighter;
-    padding-top: 3%;
-}
-.Time-buttons-div
-{
-    width:auto;
-    height:100%;
-    padding-top: 11%;
-}
-.Time-button1-div
-{
-margin:10px 10px 10px 10px;
-width:94%;
-}
-.Time-button1
-{
- height:55px;
- width:222px;
- background-color:white;
- margin-bottom:1%;
-border:1px solid  rgba(0,105,255,0.5);
-border-radius:4px;
-}
-.Time-button1 span{
-    color:var(--primary-color, rgb(0,105,255));
-    font-weight:700;
-    font-size:16px;
-}
-.Time-button1:hover{
-    border:2px solid var(--primary-color, rgb(0,105,255));
-}
 
 @media screen and (max-width:1440px) {
     .logo {
-        margin-left: 7%;
-        height: 65px;
-        width: 65px;
+        margin-left: 7.8%;
     }
+
 }
 
 @media screen and (max-width:1024px) {
@@ -696,43 +619,14 @@ border-radius:4px;
         width: 38px;
     }
 
-    
-
     .Arrow-Icon-Right {
         width: 38px;
         height: 38px;
     }
 
-    .logo {
-        margin-left: 7.8%;
-    }
     .Outer-div {
         max-width: 92% !important;
     }
-
-    .Outer-div.time-slot-active {
-        max-width: 92% !important;
-    }
-    .Date-and-Time {
-        width: auto;
-        height: 100%;
-        margin-left: 0%;
-    }
-    .Date-chart {
-        flex-wrap: inherit;
-    }
-    .Time-button1 {
-        width: 180px;
-    }
-    .Indian-standard-time-button {
-        width: 60%;
-    }
-    .VJL48qbQzWENTFAh1Knk {
-        position: absolute;
-        top: -6px;
-        right: -6px;
-    }
-    
 }
 
 @media screen and (max-width:1000px) {}
@@ -740,21 +634,9 @@ border-radius:4px;
 @media screen and (max-width:768px) {
     .Outer-div {
         flex-direction: column;
-        max-width: 95%;
-        width: 95%;
+        max-width: 680px !important;
         padding: 1rem 2rem;
-        position: relative;
         min-width: 0px;
-    }
-
-    .Outer-div.time-slot-active {
-        max-width: 95% !important;
-    }
-
-    .Left-Side-Inner-div.time-slot-active {
-
-        width: 60%;
-        margin: auto;
     }
 
     .Left-Side-Inner-div {
@@ -767,7 +649,6 @@ border-radius:4px;
     .Right-Side-Inner-div {
         width: 100%;
         border: none;
-        padding-bottom: 2rem;
         max-width: 100%;
     }
 
@@ -778,25 +659,17 @@ border-radius:4px;
     .Harshit {
         padding: 0px;
     }
-
-    .Business-Growth-h1 {
-        padding: 0px;
-        padding-right: calc((100% - 440px)/2);
-        padding-left: calc((100% - 440px)/2);
-    }
-
     .span-45-min {
-        max-width: 400px;
         padding: 0 8px;
     }
 
     .svg-45-min {
-        /*margin:auto;*/
         justify-content: center;
     }
 
     .img-heading-para-container {
-        padding-top: 0px;
+        padding-top: 1.5rem;
+        width: 100%;
     }
 
     .img-heading-container {
@@ -808,63 +681,29 @@ border-radius:4px;
         width: 38px;
     }
 
-    .written-IST {
-        width: 40%;
-    }
-
-    .Time-zone {
-        
-        padding-bottom: 40px;
-    }
-
     #ssxesgs {
         padding-bottom: 0px;
     }
-
-
-
     .Cookie-Report {
         position: absolute;
         bottom: 0px;
         display: flex;
         width: 100%;
-        /*margin-left: -2rem;*/
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
         left: 0;
     }
-
-    .Indian-standard-time-button {
-        width: 100%;
-        margin-left: 5%;
-    }
-
-    /*.Date-chart-Time-zone {*/
-    /* height:400px;*/
-    /*}*/
     .para-Left-div {
         padding: 0rem 19rem 0rem 19rem;
     }
 
-    .Select-a-Date-and-Time {
-        margin-left: 19%;
+    .Select-a-Date-and-Time h2 {
+
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
     }
-
-    .Month-Year {
-        margin-left: 2%;
-    }
-
-
-    .Indian-standard-time {
-        padding: 0rem;
-        width: 55%;
-    }
-
-    .Time-button1 {
-        width: 222px;
-    }
-
-    .Date-and-Time {
-        margin-left: 3.9%;
+    .Time-zone {
+        padding-bottom: 40px;
     }
 }
 
@@ -874,7 +713,7 @@ border-radius:4px;
         max-height: 100%;
     }
 
-    .ssxesgs.time-slot-active {
+    .ssxesgs {
         flex-direction: column-reverse !important;
     }
 
@@ -886,13 +725,6 @@ border-radius:4px;
         text-align: center;
     }
 
-    /* 
-    .Outer-div.time-slot-active {
-        max-width: 100% !important;
-        padding: 0;
-       
-     
-    } */
 
     .Outer-div {
         width: 100%;
@@ -909,26 +741,10 @@ border-radius:4px;
         padding: 0;
 
     }
-
-    /* .Right-Side-Inner-div.time-slot-active {
-        width: 100%;
-        padding: 0;
-    } */
-
-    /* .Left-Side-Inner-div {
-        width: 80%;
-    } */
     .Left-Side-Inner-div {
-        width: 60%;
-        margin: auto;
-        border: none;
+       padding-bottom: 0px;
     }
 
-    /* .Left-Side-Inner-div.time-slot-active {
-        width: 60%;
-        margin: auto;
-        padding-bottom: 0px;
-    } */
 
     .time-slots {
         margin-bottom: 2rem;
@@ -986,18 +802,18 @@ border-radius:4px;
         font-size: 24px;
     }
 
-    /* #selectedDaySES {
-        font-size: 2.5rem;
-    } */
+    #selectedDaySES {
+        font-size: 2rem;
+        font-weight: 700;
+    }
 
     #selectedDateSES {
 
         text-align: center;
         margin-top: 0;
         margin-bottom: 5px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.2;
+        font-size: 1.5rem;
+       
     }
 
     .disabled-slot-btn,
@@ -1013,15 +829,16 @@ border-radius:4px;
         border-bottom: 1px solid #dee2e6 !important;
         padding-top: 25px;
         padding-bottom: 25px;
+        position: sticky;
     }
 
     .written-IST {
         width: 50%;
     }
 
-    /* .xyadsss.time-slot-active {
+    .xyadsss.time-slot-active {
         display: block !important;
-    } */
+    }
     .xyadsss {
         display: block !important;
     }
@@ -1029,6 +846,9 @@ border-radius:4px;
     .Time-zone-para {
         padding: 0rem 9.5rem;
 
+    }
+    .Indian-standard-time {
+        width: 70%;
     }
 }
 
