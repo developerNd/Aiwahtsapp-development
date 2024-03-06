@@ -1,0 +1,330 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.Container {
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+}
+
+.Sidebar {
+    height: 100vh;
+    width: 70px;
+    background-color: #095D53;
+}
+
+.Navbar {
+    height: 100px;
+    width: 100%;
+}
+
+.Searchbar {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Searchbar input {
+    height: 25px;
+    width: 300px;
+    border-radius: .5rem;
+    border: 1px solid gray;
+
+}
+
+.Searchbar button {
+    border: 3px solid greenyellow;
+    font-size: 2.5rem;
+    color: brown;
+    background-color: antiquewhite;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    height: 25px;
+
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+.search-container button {
+    background-color: rgb(202, 235, 253);
+
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container button:hover {
+    background-color: rgb(193, 230, 250);
+}
+
+.search-container button i {
+    padding-right: 5px;
+}
+
+
+.Logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.Statusbar {
+    width: 100%;
+    height: 50%;
+    background-color: #095D53;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Statusbar p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.rightSideContentContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.Active-Requesting-Intervened {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.leftRightSideContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.LeftSideContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.LeftSideContainer,
+.chatProfileDetailsContainer {
+    height: 458px;
+    width: 25%;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.LeftSideContainer::-webkit-scrollbar,
+.chatProfileDetailsContainer::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.LeftSideContainer::-webkit-scrollbar-thumb,
+.chatProfileDetailsContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+.LeftSideContainer::-webkit-scrollbar-track,
+.chatProfileDetailsContainer::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.chatProfileDetailsContainer {
+    direction: rtl;
+}
+
+.chatProfileDetails {
+    direction: ltr;
+}
+
+.Fields {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 0rem;
+}
+
+.nameLogo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    color: brown;
+    font-size: 2.5rem;
+    border: 3px solid greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userName-and-System-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.System,
+.userName {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.System {
+    color: gray;
+}
+
+.userName {
+    color: black;
+}
+
+.userLogo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 106, 0);
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userLogo-Name-Container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 1.5rem;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+}
+
+.Name-Number-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Number {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.statusDetailsContainer {
+    background-color: rgb(217, 246, 246);
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.statusDetails {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statusDetails p {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.statusDetails div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chatProfileDetailsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatProfileDetails {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.campaignsDropdown,
+.AttributesDropdown,
+.TagsDropdown,
+.CustomerJourneyDropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    width: 95%;
+    height: 40px;
+    padding: 0rem .5rem;
+    border-radius: 0.5rem;
+}
+
+.campaignsDropdown,
+.AttributesDropdown,
+.TagsDropdown,
+.CustomerJourneyDropdown p {
+    color: rgb(46, 46, 46);
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.dropdownContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blockMessagesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: red;
+    width: 100%;
+    height: 50px;
+}
