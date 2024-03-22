@@ -4,172 +4,491 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Chat</title>
+    <title> Live Chat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="LiveChat.css">
 </head>
 
 <body>
     <div class="Container">
         <div class="Sidebar"></div>
-        <div class="rightSideContentContainer">
+        <div class="ContentContainer">
             <div class="Navbar">
                 <div class="Searchbar">
-                    <div style="padding: 1rem;">
-                        <div class="search-container">
-                            <input type="text" placeholder="Search name or mobile number">
-                            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15"
-                                    fill="blue" viewBox="0 0 512 512">
-                                    <path
-                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                                </svg></button>
-                        </div>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search name or mobile number" class="colorful-placeholder">
+                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="13" width="13"
+                                fill="#095D53" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                            </svg></button>
                     </div>
-                    <div style="padding: 1rem;">
-                        <button class="Logo">S</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#7A7C79" class="bi bi-filter"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <div class="Searchbar-logo-container">
+                        <button class="Searchbar-Logo">S</button>
+                        <p>Srishti</p>
                     </div>
                 </div>
                 <div class="Statusbar">
                     <div style="padding: 1rem;">
-                        <div class="Active-Requesting-Intervened">
-                            <p>ACTIVE</p>
-                            <p>REQUESTING</p>
-                            <p>INTERVENED</p>
+                        <div class="Status-Container">
+                            <div class="ActiveStatus">
+                                <p>ACTIVE</p>
+                                <p>(130)</p>
+                            </div>
+                            <div class="RequestingStatus">
+                                <p>REQUESTING</p>
+                                <p>(0)</p>
+                            </div>
+                            <div class="IntervenedStatus">
+                                <p>INTERVENED</p>
+                                <p>(1)</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg>
+                            <div class="Statusbar-Name-NumberContainer">
+                                <p>SRISHTI</p>
+                                <p> 7723883147</p>
+                            </div>
                         </div>
                     </div>
                     <div style="width: 300px;
                     display: flex;
                     justify-content: center;">
                         <div class="Chat-Profile">
-                            <p>CHAT PROFILE</p>
+                            <p>Chat Profile</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="leftRightSideContainer">
+            <div class="leftSide-ChatProfileDetailsContainer">
                 <div class="LeftSideContainer">
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
+                    <div class="LeftSideScrollbar">
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ABIN</p>
+                                <p class="System">SYSTEM: User Initiated Conversation Started</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
+                        </div>
+                        <div class="Fields">
+                            <div class="initialLogo">A</div>
+                            <div class="userName-and-System-Container">
+                                <p class="userName">ADITYA</p>
+                                <p class="System">SYSTEM: User Closed</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
+                    <div class="Empty-Container"></div>
+                </div>
+
+                <div class="chat-container">
+                    <div class="ShowChatDateContainer">
+                        <div class="ShowChatDate">
+                            <span>TODAY</span>
                         </div>
                     </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
+                    <div class="chat">
+                        <div class="message received background-color-recieved">
+                            <div class="message-content display-flex">
+                                <p class="message-color">Hello!</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+                        </div>
+                        <div class="message sent background-color-sent">
+                            <div class="message-content display-flex">
+                                <p class="message-color">Hi! How are you?</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content display-flex">
+                                <p class="message-color">I'm Good.What about you?</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+
+                        </div>
+                        <div class="message sent  background-color-sent">
+                            <div class="message-content display-flex">
+                                <p class="message-color">I'm doing good.</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content display-flex">
+                                <p class="message-color">What are you doing?</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+                        </div>
+                        <div class="message sent  background-color-sent">
+                            <div class="message-content display-flex">
+                                <p class="message-color">Just working</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content display-flex">
+                                <p class="message-color">Are you available on sunday?</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+                        </div>
+                        <div class="message sent  background-color-sent">
+                            <div class="message-content display-flex">
+                                <p class="message-color">Yes,I am.</p>
+                                <p class="message-timestamp">10:01 pm</p>
+                            </div>
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content">
+                                <div class="Message-imageContainer">
+                                    <img src="https://res.cloudinary.com/purnesh/image/upload/w_540,f_auto,q_auto:eco,c_limit/cafe-terazza1.jpg"
+                                        alt="Sample Image">
+                                </div>
+                                <p class="message-color">Do you wanna go here with me?</p>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message sent  background-color-sent">
+                            <div class="message-content">
+                                <div class="Message-imageContainer">
+                                    <img src="data:image/jpeg;base64,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"
+                                        alt="Sample Image">
+                                </div>
+                                <p class="message-color">I think this place is good.</p>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content ">
+                                <div class="document-message">
+                                    <div class="document-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
+                                        </svg>
+                                    </div>
+                                    <div class="document-info">
+                                        <p class="document-name">Top 10 Cafes in Indore.pdf</p>
+                                        <div class="documentTypeSize-Info">
+                                            <p class="document-type">PDF</p>
+                                            <p class="document-size">2.3 MB</p>
+                                        </div>
+                                    </div>
+                                    <div class="download-document-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"
+                                            fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="message-color">This is the list of all places.Check it</p>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message sent  background-color-sent">
+                            <div class="message-content">
+                                <div class="document-message sender">
+                                    <div class="document-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
+                                        </svg>
+                                    </div>
+                                    <div class="document-info">
+                                        <p class="document-name">Top 10 Cafes in Indore.pdf</p>
+                                        <div class="documentTypeSize-Info">
+                                            <p class="document-type">PDF</p>
+                                            <p class="document-size">2.3 MB</p>
+                                        </div>
+                                    </div>
+                                    <div class="download-document-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30"
+                                            fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="message-color">This is the list of all places.Check it</p>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content">
+                                <div class="Message-imageContainer">
+                                    <video controls class="Video">
+                                        <source src="video.mp4" type="video/mp4">
+                                </div>
+                                <p class="message-color">Do you wanna go here with me?</p>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message flex-End">
+                            <div class="message-content  background-color-sent ">
+                                <div class="message-template ">
+                                    Hi there! I have some exciting news for you. We are offering a special deal this
+                                    weekend:
+                                    <br>
+                                    - 2 Nights Stay in our Deluxe Suite
+                                    <br>
+                                    - Breakfast Included
+                                    <br>
+                                    - Spa Voucher worth $50
+                                    <br>
+                                    Interested in booking? Tap below to book now!
+                                </div>
+                                <div class="message-template-timestamp">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                            <div class="message-template-options background-color-sent ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" fill="#54b2f4"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+                                </svg>
+                                <a href="#" class="book-now">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content background-color-recieved">
+                                <div class="message-template message-template-before">
+                                    Hi there! I have some exciting news for you. We are offering a special deal this
+                                    weekend:
+                                    <br>
+                                    - 2 Nights Stay in our Deluxe Suite
+                                    <br>
+                                    - Breakfast Included
+                                    <br>
+                                    - Spa Voucher worth $50
+                                    <br>
+                                    Interested in booking? Tap below to book now!
+                                </div>
+                                <div class="message-template-timestamp">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                            <div class="message-template-options background-color-recieved ">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" fill="#54b2f4"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+                                </svg>
+                                <a href="#" class="book-now">Book Now</a>
+                            </div>
+                        </div>
+
+                        <div class="message sent background-color-sent">
+                            <div class="message-content">
+                                <div class="message-template">
+                                    Hi there! Are you interested in our special offer?
+                                </div>
+                                <div class="message-options">
+                                    <button class="btn-yes">Yes</button>
+                                    <button class="btn-no">No</button>
+                                </div>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message received background-color-recieved">
+                            <div class="message-content">
+                                <div class="message-template">
+                                    Hi there! Are you interested in our special offer?
+                                </div>
+                                <div class="message-options">
+                                    <button class="btn-yes">Yes</button>
+                                    <button class="btn-no">No</button>
+                                </div>
+                                <div class="message-timestamp position-absolute">
+                                    <p>10:04 pm</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
-                        </div>
-                    </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
-                        </div>
-                    </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
-                        </div>
-                    </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
-                        </div>
-                    </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
-                        </div>
-                    </div>
-                    <div class="Fields">
-                        <div class="nameLogo">A</div>
-                        <div class="userName-and-System-Container">
-                            <p class="userName">Aditya</p>
-                            <p class="System">SYSTEM: User Closed</p>
+                    <div class="ComposeContainer">
+                        <div class="messageKeyboardContainer">
+                            <div class="compose">
+                                <div class="InputMaximizeContainer">
+                                    <input type="text" placeholder="Type '/' for canned messages">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" fill="#818080"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z" />
+                                    </svg>
+                                </div>
+                                <div class="TextEditorToolsContainer">
+                                    <div class="TextEditorTools">
+                                        <!--bold--><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 384 512">
+                                            <path
+                                                d="M0 64C0 46.3 14.3 32 32 32H80 96 224c70.7 0 128 57.3 128 128c0 31.3-11.3 60.1-30 82.3c37.1 22.4 62 63.1 62 109.7c0 70.7-57.3 128-128 128H96 80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V256 96H32C14.3 96 0 81.7 0 64zM224 224c35.3 0 64-28.7 64-64s-28.7-64-64-64H112V224H224zM112 288V416H256c35.3 0 64-28.7 64-64s-28.7-64-64-64H224 112z" />
+                                        </svg>
+                                        <!-- Italic --><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 384 512">
+                                            <path
+                                                d="M128 64c0-17.7 14.3-32 32-32H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H293.3L160 416h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H90.7L224 96H160c-17.7 0-32-14.3-32-32z" />
+                                        </svg>
+                                        <!-- Emoji --><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 512 512">
+                                            <path
+                                                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                        </svg>
+                                        <!-- AttachFile--><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 448 512">
+                                            <path
+                                                d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" />
+                                        </svg>
+                                        <!--Images--> <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 576 512">
+                                            <path
+                                                d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z" />
+                                        </svg>
+                                        <!--Bookmark--><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 448 512">
+                                            <path
+                                                d="M0 96C0 43 43 0 96 0h96V190.7c0 13.4 15.5 20.9 26 12.5L272 160l54 43.2c10.5 8.4 26 .9 26-12.5V0h32 32c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32H384 96c-53 0-96-43-96-96V96zM64 416c0 17.7 14.3 32 32 32H352V384H96c-17.7 0-32 14.3-32 32z" />
+                                        </svg>
+                                        <!--Bolt--><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"
+                                            fill="#818080" viewBox="0 0 384 512">
+                                            <path
+                                                d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <button>Send</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="chatProfileDetailsContainer">
                     <div class="chatProfileDetails">
-                        <div class="userLogo-Name-Container">
-                            <div class="userLogo">S</div>
-                            <div class="Name-Number-Container">
-                                <div class="Name">SRISHTI</div>
-                                <p class="Number">7723883147</p>
+                        <div class="chatProfileDetails-Center">
+                            <div class="userLogo-Name-Container">
+                                <div class="userLogo">S</div>
+                                <div class="Name-Number-Container">
+                                    <div class="Name">SRISHTI</div>
+                                    <p class="Number">7723883147</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="statusDetailsContainer">
-                            <div class="statusDetails">
+                        <div class="User-InfoContainer">
+                            <div class="User-Info">
                                 <div>
                                     <p>Status</p>
-                                    <p>Intervened</p>
-                                </div>
-                                <div>
                                     <p>Intervened by</p>
-                                    <p>Srishti Gurjar</p>
-                                </div>
-                                <div>
                                     <p>Last Active</p>
-                                    <p>05-03-2024</p>
-                                </div>
-                                <div>
                                     <p>Template Messages</p>
-                                    <p>16</p>
-                                </div>
-                                <div>
                                     <p>Session Messages</p>
-                                    <p>12</p>
-                                </div>
-                                <div>
                                     <p>Unresolved Queries</p>
-                                    <p>0</p>
-                                </div>
-                                <div>
                                     <p>Source</p>
-                                    <p>ORGANIC</p>
-                                </div>
-                                <div>
                                     <p>First Message</p>
-                                    <p>...</p>
-                                </div>
-                                <div>
                                     <p>WA Conversation</p>
-                                    <p>Active</p>
-                                </div>
-                                <div>
                                     <p>MAU Status</p>
-                                    <p>Active</p>
-                                </div>
-                                <div>
                                     <p>Incoming</p>
-                                    <p>Allowed</p>
+                                    <p>Opted In</p>
                                 </div>
                                 <div>
-                                    <p>Opted In</p>
-                                    <p><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25"
+                                    <p>Intervened</p>
+                                    <p>Srishti Gurjar</p>
+                                    <p>05-03-2024</p>
+                                    <p>16</p>
+                                    <p>12</p>
+                                    <p>0</p>
+                                    <p>ORGANIC</p>
+                                    <p>...</p>
+                                    <p>Active</p>
+                                    <p>Active</p>
+                                    <p>Allowed</p>
+                                    <p><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="#939A97"
                                             viewBox="0 0 576 512">
                                             <path
                                                 d="M192 64C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192s-86-192-192-192H192zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
@@ -179,53 +498,45 @@
                         </div>
                         <div class="dropdownContainer">
                             <div class="campaignsDropdown">
-                                <p>Campaigns</p>
-                                <p class="None"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                                        viewBox="0 0 320 512">
+                                <p id="dropdownToggle">Campaigns</p>
+                                <p class="None"> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="#8E8E8E" viewBox="0 0 512 512">
                                         <path
-                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                                     </svg></p>
                             </div>
                             <div class="AttributesDropdown">
                                 <p>Attributes</p>
-                                <p class="None"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                                        viewBox="0 0 320 512">
+                                <p class="None"> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="#8E8E8E" viewBox="0 0 512 512">
                                         <path
-                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                                     </svg></p>
                             </div>
                             <div class="TagsDropdown">
                                 <p>Tags</p>
-                                <p class="None"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                                        viewBox="0 0 320 512">
+                                <p class="None"> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="#8E8E8E" viewBox="0 0 512 512">
                                         <path
-                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                                     </svg></p>
                             </div>
                             <div class="CustomerJourneyDropdown">
                                 <p>Customer Journey</p>
-                                <p class="None"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                                        viewBox="0 0 320 512">
+                                <p class="None"> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                        fill="#8E8E8E" viewBox="0 0 512 512">
                                         <path
-                                            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
                                     </svg></p>
                             </div>
                         </div>
-                        <div class="blockMessagesContainer"><span><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="red"
-
-                                viewBox="0 0 512 512">
-                                <path
-                                    d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
-                            </svg></span>
-                            <p>Block Incoming Messages</p>
-                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
+    </div>
+    <script src="LiveChat.js"></script>
 </body>
 
 </html>
