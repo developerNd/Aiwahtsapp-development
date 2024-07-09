@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+<script>
+   function toggleDarkMode() {
+    // Toggle the dark mode class on the body
+    document.body.classList.toggle('dark-mode');
+
+    // Select all elements with the class 'dark-mode-container'
+    const containers = document.querySelectorAll('.dark-mode-container');
+    // Loop through each element and toggle the 'dark-mode' class
+    containers.forEach(container => {
+        container.classList.toggle('dark-mode');
+    });
+}
+
+</script>
+
+<body>
+    <aside>
+        <div class="sidebar">
+          <div class="aiLogo"></div>
+          <div class="menuContainer">
+            <div class="options">
+              <div class="d-flex align-items-center Dashboard option">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M8.557 2.75H4.682A1.932 1.932 0 0 0 2.75 4.682v3.875a1.942 1.942 0 0 0 1.932 1.942h3.875a1.942 1.942 0 0 0 1.942-1.942V4.682A1.942 1.942 0 0 0 8.557 2.75m10.761 0h-3.875a1.942 1.942 0 0 0-1.942 1.932v3.875a1.943 1.943 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942V4.682a1.932 1.932 0 0 0-1.932-1.932M8.557 13.5H4.682a1.943 1.943 0 0 0-1.932 1.943v3.875a1.932 1.932 0 0 0 1.932 1.932h3.875a1.942 1.942 0 0 0 1.942-1.932v-3.875a1.942 1.942 0 0 0-1.942-1.942m8.818-.001a3.875 3.875 0 1 0 0 7.75a3.875 3.875 0 0 0 0-7.75" />
+                  </svg>
+                </div>
+              </div>
+              <div class="Contact option">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="white"
+                      d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
+                  </svg>
+                </div>
+              </div>
+              <div class="Live-Chat option">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36">
+                    <path fill="white"
+                      d="M18 2.5c-8.82 0-16 6.28-16 14s7.18 14 16 14a18 18 0 0 0 4.88-.68l5.53 3.52a1 1 0 0 0 1.54-.84v-6.73a13 13 0 0 0 4-9.27C34 8.78 26.82 2.5 18 2.5m8 14a1 1 0 0 1-1 1H11a1 1 0 0 1 0-2h14a1 1 0 0 1 1 1m-3.25 5a1 1 0 0 1-1 1h-7.5a1 1 0 0 1 0-2h7.5a1 1 0 0 1 1 1m-12.47-10a1 1 0 0 1 1-1h13.44a1 1 0 0 1 0 2H11.28a1 1 0 0 1-1-1"
+                      class="clr-i-solid clr-i-solid-path-1" />
+                    <path fill="none" d="M0 0h36v36H0z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="Leads option">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
+                    <path fill="white"
+                      d="M21.066 20.667c1.227-.682 1.068-3.31-.354-5.874c-.61-1.104-1.36-1.998-2.11-2.623a5.229 5.229 0 0 1-3.1 1.03a5.23 5.23 0 0 1-3.105-1.03c-.75.625-1.498 1.52-2.11 2.623c-1.423 2.563-1.58 5.192-.35 5.874c.548.312 1.126.078 1.722-.496a10.51 10.51 0 0 0-.167 1.874c0 2.938 1.14 5.312 2.543 5.312c.846 0 1.265-.865 1.466-2.188c.2 1.314.62 2.188 1.46 2.188c1.397 0 2.546-2.375 2.546-5.312c0-.66-.062-1.29-.168-1.873c.6.575 1.176.813 1.726.497zM15.5 12.2a4.279 4.279 0 1 0-.003-8.557A4.279 4.279 0 0 0 15.5 12.2m8.594 2.714a3.514 3.514 0 0 0 0-7.025a3.513 3.513 0 1 0 .001 7.027zm4.28 2.13c-.502-.908-1.116-1.642-1.732-2.155a4.3 4.3 0 0 1-2.546.845c-.756 0-1.46-.207-2.076-.55c.496 1.093.803 2.2.86 3.19c.094 1.516-.38 2.64-1.328 3.165a2.017 2.017 0 0 1-.653.224c-.057.392-.096.8-.096 1.23c0 2.413.935 4.362 2.088 4.362c.694 0 1.04-.71 1.204-1.796c.163 1.08.508 1.796 1.2 1.796c1.145 0 2.09-1.95 2.09-4.36c0-.543-.053-1.06-.14-1.54c.492.473.966.668 1.418.408c1.007-.56.877-2.718-.29-4.82zm-21.468-2.13a3.512 3.512 0 1 0-3.514-3.512a3.515 3.515 0 0 0 3.514 3.514zm2.535 6.622c-1.592-.885-1.738-3.524-.456-6.354a4.242 4.242 0 0 1-2.078.553c-.956 0-1.832-.32-2.55-.846c-.615.512-1.228 1.246-1.732 2.153c-1.167 2.104-1.295 4.262-.287 4.82c.45.258.925.065 1.414-.406a8.83 8.83 0 0 0-.135 1.538c0 2.412.935 4.36 2.088 4.36c.694 0 1.04-.71 1.204-1.795c.165 1.08.51 1.796 1.2 1.796c1.147 0 2.09-1.95 2.09-4.36c0-.433-.04-.842-.097-1.234a2.02 2.02 0 0 1-.66-.226z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-flex align-items-center Meeting-schedule option">
+                <div class="d-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="white"
+                      d="M5 8h14V6H5zm0 0V6zm0 14q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v5.675q-.475-.225-.975-.375T19 11.075V10H5v10h6.3q.175.55.413 1.05t.562.95zm13 1q-2.075 0-3.537-1.463T13 18t1.463-3.537T18 13t3.538 1.463T23 18t-1.463 3.538T18 23m1.675-2.625l.7-.7L18.5 17.8V15h-1v3.2z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="d-flex align-items-center chatBot option">
+                <div class="d-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      color="white">
+                      <path d="M4 15.5a2 2 0 1 1 0-4m16 4a2 2 0 1 0 0-4M7 7V4m10 3V4" />
+                      <circle cx="7" cy="3" r="1" />
+                      <circle cx="17" cy="3" r="1" />
+                      <path
+                        d="M13.5 7h-3c-2.828 0-4.243 0-5.121.909S4.5 10.281 4.5 13.207s0 4.389.879 5.298c.878.909 2.293.909 5.121.909h1.025c.792 0 1.071.163 1.617.757c.603.657 1.537 1.534 2.382 1.738c1.201.29 1.336-.111 1.068-1.256c-.076-.326-.267-.847-.066-1.151c.113-.17.3-.212.675-.296c.591-.132 1.079-.348 1.42-.701c.879-.91.879-2.372.879-5.298s0-4.389-.879-5.298C17.743 7 16.328 7 13.5 7" />
+                      <path d="M9.5 15c.57.607 1.478 1 2.5 1s1.93-.393 2.5-1m-5.491-4H9m6.009 0H15" />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="Nurturing option">
+                <div class="d-flex">
+                  <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M31.9739 18.4927C31.9657 18.3704 31.9068 18.2549 31.8082 18.1683C31.7096 18.0816 31.5782 18.0298 31.439 18.0227C27.7577 17.8352 24.8019 18.819 23.5316 20.6615C22.6924 21.8797 22.6938 23.3591 23.5202 24.7704C23.0497 25.2625 22.706 25.8382 22.5124 26.458L21.3553 25.4373C21.9114 24.4167 21.8901 23.3529 21.2841 22.4691C20.3453 21.1072 18.1782 20.3771 15.4876 20.5159C15.3484 20.523 15.2171 20.5749 15.1185 20.6615C15.0199 20.7481 14.9609 20.8636 14.9528 20.9859C14.7942 23.3504 15.6256 25.2548 17.1754 26.0799C17.6868 26.3545 18.2745 26.4998 18.8738 26.4999C19.4555 26.4935 20.0281 26.3724 20.5494 26.1455L22.3275 27.708V29.5C22.3275 29.6326 22.3874 29.7598 22.4942 29.8535C22.6009 29.9473 22.7456 30 22.8965 30C23.0474 30 23.1921 29.9473 23.2988 29.8535C23.4055 29.7598 23.4655 29.6326 23.4655 29.5V27.6568C23.4629 26.8613 23.7709 26.0891 24.3381 25.4692C25.0699 25.8053 25.8816 25.9852 26.7072 25.9942C27.5055 25.9965 28.2889 25.8048 28.9711 25.4405C31.0678 24.3254 32.1901 21.7278 31.9739 18.4927ZM17.7621 25.2248C16.6711 24.6442 16.0538 23.2697 16.0687 21.4997C18.0829 21.4847 19.6469 22.0291 20.3076 22.9879C20.6526 23.4879 20.7088 24.071 20.4826 24.6717L18.7465 23.146C18.6389 23.0562 18.4957 23.0068 18.3473 23.0085C18.1989 23.0102 18.0572 23.0627 17.9522 23.1549C17.8473 23.2471 17.7875 23.3717 17.7856 23.5021C17.7837 23.6325 17.8399 23.7584 17.9421 23.8529L19.6782 25.3786C18.9947 25.5773 18.3318 25.528 17.7621 25.2248ZM28.3815 24.586C27.4284 25.0929 26.3082 25.1317 25.1703 24.7111L28.9889 21.3547C29.0911 21.2601 29.1472 21.1343 29.1453 21.0039C29.1434 20.8735 29.0836 20.7489 28.9787 20.6567C28.8738 20.5645 28.732 20.512 28.5836 20.5103C28.4353 20.5086 28.292 20.558 28.1845 20.6478L24.3652 23.9998C23.8844 22.9997 23.9278 22.0147 24.5074 21.1778C25.4989 19.7402 27.8502 18.939 30.8608 19.0008C30.9291 21.6459 30.0187 23.7148 28.3815 24.586Z"
+                      fill="white" />
+                    <path
+                      d="M6.4 7C8.46933 7 10.1333 5.44 10.1333 3.5C10.1333 1.56 8.46933 0 6.4 0C4.33067 0 2.66667 1.56 2.66667 3.5C2.66667 5.44 4.33067 7 6.4 7ZM10.6667 30C10.6667 31.1 9.70667 32 8.53333 32H4.26667C3.09333 32 2.13333 31.1 2.13333 30V22C0.96 22 0 21.1 0 20V13C0 10.8 1.92 9 4.26667 9H8.53333C10.88 9 12.8 10.8 12.8 13V20C12.8 21.1 11.84 22 10.6667 22V30Z"
+                      fill="white" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="logout-box d-flex flex-column">
+            <div class="d-flex justify-content-center">
+              <div class="logo"></div>
+            </div>
+            <div class="d-flex justify-content-center logout flex-column align-items-center">
+              <svg width="15" height="15" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_59_898)">
+                  <path
+                    d="M21.25 10L19.4875 11.7625L21.4625 13.75H11.25V16.25H21.4625L19.4875 18.225L21.25 20L26.25 15L21.25 10ZM6.25 6.25H15V3.75H6.25C4.875 3.75 3.75 4.875 3.75 6.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H15V23.75H6.25V6.25Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_59_898">
+                    <rect width="30" height="30" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="logoutText">Logout</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    <div class="content-container">
+        <nav class="navbar" style="padding-top: 0px;">
+            <div class="custom-container d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="#">
+                    <h5>Dashboard</h5>
+                </a>
+                <div class="d-flex justify-content-between align-items-center notifications-profile-container">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                            stroke="#6C6A6A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <div style="position: relative;">
+                        <svg width="20" height="22" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0277 0.25C7.73472 0.25 5.80843 1.97411 5.55522 4.25306L4.5 13.75H1.5C0.671573 13.75 0 14.4216 0 15.25V16.75C0 17.5784 0.671573 18.25 1.5 18.25H22.5C23.3284 18.25 24 17.5784 24 16.75V15.25C24 14.4216 23.3284 13.75 22.5 13.75H19.5L18.4448 4.25306C18.1916 1.97411 16.2653 0.25 13.9723 0.25H10.0277Z"
+                                fill="#848484" />
+                            <rect opacity="0.3" x="9" y="19.75" width="6" height="6" rx="2.25" fill="#848484" />
+                        </svg>
+                    </div>
+                    <div class="Notify-count d-flex align-items-center justify-content-center"><span>2</span></div>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.3246 4.31731C10.751 2.5609 13.249 2.5609 13.6754 4.31731C13.9508 5.45193 15.2507 5.99038 16.2478 5.38285C17.7913 4.44239 19.5576 6.2087 18.6172 7.75218C18.0096 8.74925 18.5481 10.0492 19.6827 10.3246C21.4391 10.751 21.4391 13.249 19.6827 13.6754C18.5481 13.9508 18.0096 15.2507 18.6172 16.2478C19.5576 17.7913 17.7913 19.5576 16.2478 18.6172C15.2507 18.0096 13.9508 18.5481 13.6754 19.6827C13.249 21.4391 10.751 21.4391 10.3246 19.6827C10.0492 18.5481 8.74926 18.0096 7.75219 18.6172C6.2087 19.5576 4.44239 17.7913 5.38285 16.2478C5.99038 15.2507 5.45193 13.9508 4.31731 13.6754C2.5609 13.249 2.5609 10.751 4.31731 10.3246C5.45193 10.0492 5.99037 8.74926 5.38285 7.75218C4.44239 6.2087 6.2087 4.44239 7.75219 5.38285C8.74926 5.99037 10.0492 5.45193 10.3246 4.31731Z"
+                            stroke="#6C6A6A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+                            stroke="#6C6A6A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <div class="justify-content-between align-items-center Profile-container">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                onclick="toggleDarkMode()">
+                        </div>
+                    </div>
+                    <div class="logo-background">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="content">
+                <section>
+                    <div class="overview-login-facebook-button-container d-flex justify-content-between">
+                        <span class="Over-view-span">Over view</span>
+                        <div class="login-with-facebook-button-container">
+                            <p class="Connect-with-WhatsApp-para">Connect WhatsApp to the wingsfly</p>
+                            <button>Login with Facebook</button>
+                        </div>
+                        <div class="moreOptions-OverviewContainer">
+                            <span class="material-symbols-outlined">
+                                more_vert
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="dropdown-buttons-container">
+                        <button>
+                            <span class="d-flex align-items-center justify-content-center" style="gap: 5px;">
+                                <span>Projects</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_885_1134)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.7064 15.7073C12.5188 15.8948 12.2645 16.0001 11.9994 16.0001C11.7342 16.0001 11.4799 15.8948 11.2924 15.7073L5.63537 10.0503C5.53986 9.9581 5.46367 9.84775 5.41126 9.72575C5.35886 9.60374 5.33127 9.47252 5.33012 9.33974C5.32896 9.20696 5.35426 9.07529 5.40454 8.95239C5.45483 8.82949 5.52908 8.71784 5.62297 8.62395C5.71686 8.53006 5.82852 8.4558 5.95141 8.40552C6.07431 8.35524 6.20599 8.32994 6.33877 8.33109C6.47155 8.33225 6.60277 8.35983 6.72477 8.41224C6.84677 8.46465 6.95712 8.54083 7.04937 8.63634L11.9994 13.5863L16.9494 8.63634C17.138 8.45418 17.3906 8.35339 17.6528 8.35567C17.915 8.35795 18.1658 8.46312 18.3512 8.64852C18.5366 8.83393 18.6418 9.08474 18.644 9.34694C18.6463 9.60914 18.5455 9.86174 18.3634 10.0503L12.7064 15.7073Z"
+                                            fill="#4D4343" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_885_1134">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <button>
+                            <span class="d-flex align-items-center justify-content-center" style="gap: 5px;">
+                                <span>Dates</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_885_1134)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.7064 15.7073C12.5188 15.8948 12.2645 16.0001 11.9994 16.0001C11.7342 16.0001 11.4799 15.8948 11.2924 15.7073L5.63537 10.0503C5.53986 9.9581 5.46367 9.84775 5.41126 9.72575C5.35886 9.60374 5.33127 9.47252 5.33012 9.33974C5.32896 9.20696 5.35426 9.07529 5.40454 8.95239C5.45483 8.82949 5.52908 8.71784 5.62297 8.62395C5.71686 8.53006 5.82852 8.4558 5.95141 8.40552C6.07431 8.35524 6.20599 8.32994 6.33877 8.33109C6.47155 8.33225 6.60277 8.35983 6.72477 8.41224C6.84677 8.46465 6.95712 8.54083 7.04937 8.63634L11.9994 13.5863L16.9494 8.63634C17.138 8.45418 17.3906 8.35339 17.6528 8.35567C17.915 8.35795 18.1658 8.46312 18.3512 8.64852C18.5366 8.83393 18.6418 9.08474 18.644 9.34694C18.6463 9.60914 18.5455 9.86174 18.3634 10.0503L12.7064 15.7073Z"
+                                            fill="#4D4343" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_885_1134">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                        <button>
+                            <span class="d-flex align-items-center justify-content-center" style="gap: 5px;">
+                                <span>Weekly</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_885_1134)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.7064 15.7073C12.5188 15.8948 12.2645 16.0001 11.9994 16.0001C11.7342 16.0001 11.4799 15.8948 11.2924 15.7073L5.63537 10.0503C5.53986 9.9581 5.46367 9.84775 5.41126 9.72575C5.35886 9.60374 5.33127 9.47252 5.33012 9.33974C5.32896 9.20696 5.35426 9.07529 5.40454 8.95239C5.45483 8.82949 5.52908 8.71784 5.62297 8.62395C5.71686 8.53006 5.82852 8.4558 5.95141 8.40552C6.07431 8.35524 6.20599 8.32994 6.33877 8.33109C6.47155 8.33225 6.60277 8.35983 6.72477 8.41224C6.84677 8.46465 6.95712 8.54083 7.04937 8.63634L11.9994 13.5863L16.9494 8.63634C17.138 8.45418 17.3906 8.35339 17.6528 8.35567C17.915 8.35795 18.1658 8.46312 18.3512 8.64852C18.5366 8.83393 18.6418 9.08474 18.644 9.34694C18.6463 9.60914 18.5455 9.86174 18.3634 10.0503L12.7064 15.7073Z"
+                                            fill="#4D4343" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_885_1134">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </section>
+                <section>
+                    <div class="salesInfoContainer d-flex ">
+                        <div
+                            class="totalSalesContainer d-flex justify-content-center align-items-center dark-mode-container">
+                            <span>
+                                <svg width="26" height="33" viewBox="0 0 43 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M41.6701 12.9618L21.3351 1L1 12.9618V36.8854L21.3351 48.8472L41.6701 36.8854V12.9618Z"
+                                        stroke="#626161" stroke-width="1.95" stroke-linejoin="round" />
+                                    <path
+                                        d="M11.7656 27.3146V32.0993M21.3351 22.5298V32.0993V22.5298ZM30.9045 17.7451V32.0993V17.7451Z"
+                                        stroke="#626161" stroke-width="1.95" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <div class="d-flex flex-column">
+                                <span class="totalSales">Total Sales</span>
+                                <span class="d-flex align-items-center" style="gap: 4px;">
+                                    <svg width="13" height="20" viewBox="0 0 17 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 3V0H0V3H5.40909C7.42127 3 9.11973 4.257 9.75954 6H0V9H9.75954C9.44231 9.87485 8.85379 10.6329 8.07482 11.1701C7.29585 11.7072 6.36464 11.9972 5.40909 12H0V15.621L8.63291 24H13.0035L3.73073 15H5.40909C7.18939 14.9977 8.91442 14.3996 10.2933 13.3066C11.6722 12.2137 12.6207 10.6926 12.9787 9H17V6H12.9787C12.7418 4.9083 12.2537 3.88273 11.5507 3H17Z"
+                                            fill="#B5DA01" />
+                                    </svg>
+                                    <span class="totalSalesAmount">5,67,863</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="apportionatyContainer d-flex justify-content-center align-items-center dark-mode-container">
+                            <span>
+                                <svg width="26" height="33" viewBox="0 0 43 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M41.6701 12.9618L21.3351 1L1 12.9618V36.8854L21.3351 48.8472L41.6701 36.8854V12.9618Z"
+                                        stroke="#626161" stroke-width="1.95" stroke-linejoin="round" />
+                                    <path
+                                        d="M11.7656 27.3146V32.0993M21.3351 22.5298V32.0993V22.5298ZM30.9045 17.7451V32.0993V17.7451Z"
+                                        stroke="#626161" stroke-width="1.95" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <div class="d-flex flex-column">
+                                <span class="apportionaty">apportionaty</span>
+                                <span class="d-flex align-items-center" style="gap: 4px;">
+                                    <svg width="13" height="20" viewBox="0 0 17 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17 3V0H0V3H5.40909C7.42127 3 9.11973 4.257 9.75954 6H0V9H9.75954C9.44231 9.87485 8.85379 10.6329 8.07482 11.1701C7.29585 11.7072 6.36464 11.9972 5.40909 12H0V15.621L8.63291 24H13.0035L3.73073 15H5.40909C7.18939 14.9977 8.91442 14.3996 10.2933 13.3066C11.6722 12.2137 12.6207 10.6926 12.9787 9H17V6H12.9787C12.7418 4.9083 12.2537 3.88273 11.5507 3H17Z"
+                                            fill="#626161" />
+                                    </svg>
+
+                                    <span class="apportionatyAmount">2000</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="no-ofSaleContainer d-flex justify-content-center align-items-center dark-mode-container">
+                            <span>
+                                <svg width="30" height="37" viewBox="0 0 43 44" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.5 35.4167C14.7917 35.4167 16.6667 37.2917 16.6667 39.5833C16.6667 41.875 14.7917 43.75 12.5 43.75C10.2083 43.75 8.33333 41.875 8.33333 39.5833C8.33333 37.2917 10.2083 35.4167 12.5 35.4167ZM33.3333 35.4167C35.625 35.4167 37.5 37.2917 37.5 39.5833C37.5 41.875 35.625 43.75 33.3333 43.75C31.0417 43.75 29.1667 41.875 29.1667 39.5833C29.1667 37.2917 31.0417 35.4167 33.3333 35.4167ZM12.9167 28.75C12.9167 28.9583 13.125 29.1667 13.3333 29.1667H37.5V33.3333H12.5C10.2083 33.3333 8.33333 31.4583 8.33333 29.1667C8.33333 28.3333 8.54167 27.7083 8.75 27.0833L11.4583 22.0833L4.16667 6.25H0V2.08333H6.875L15.8333 20.8333H30.4167L38.5417 6.25L42.0833 8.33333L33.9583 22.9167C33.3333 24.1667 31.875 25 30.4167 25H14.7917L12.9167 28.3333V28.75ZM17.5 0C19.1667 0 20.4167 1.25 20.4167 2.91667C20.4167 4.58333 19.1667 5.83333 17.5 5.83333C15.8333 5.83333 14.5833 4.58333 14.5833 2.91667C14.5833 1.25 16.0417 0 17.5 0ZM28.3333 16.6667C26.6667 16.6667 25.4167 15.4167 25.4167 13.75C25.4167 12.0833 26.6667 10.8333 28.3333 10.8333C30 10.8333 31.25 12.0833 31.25 13.75C31.25 15.4167 29.7917 16.6667 28.3333 16.6667ZM17.0833 16.6667L14.5833 14.1667L28.75 0L31.25 2.5L17.0833 16.6667Z"
+                                        fill="#626161" />
+                                </svg>
+                            </span>
+                            <div class="d-flex flex-column">
+                                <span class="no-ofSale">No of Sale</span>
+                                <span class="d-flex align-items-center" style="gap: 4px;">
+                                    <span class="totalno-ofSale">100</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="d-flex flex-column" style="gap: 20px;">
+                    <div class="d-flex StatisticsContentContainer">
+                        <div class="whatsAppStaticsContainer dark-mode-container">
+                            <div class=" p-3">
+                                <div class="d-flex justify-content-between">
+                                    <h1>Whatsapp Statistics</h1>
+                                    <button
+                                        class="today-button d-flex align-items-center justify-content-center">Today<svg
+                                            width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.27337 5.31132L8.73001 1.90785C8.94091 1.7002 8.94091 1.36343 8.73001 1.15577C8.51907 0.948076 8.17712 0.948076 7.96618 1.15577L5.43155 3.65141C5.43155 3.65141 5.1765 3.93265 4.89351 3.92675C4.61732 3.92099 4.35135 3.65141 4.35135 3.65141L1.81672 1.15586C1.60578 0.948161 1.26383 0.948161 1.05289 1.15586C0.947508 1.25966 0.894709 1.3958 0.894709 1.5319C0.894709 1.66799 0.947508 1.80409 1.05289 1.90794L4.50954 5.31132C4.72048 5.51901 5.06243 5.51901 5.27337 5.31132Z"
+                                                fill="#626161" stroke="white" stroke-width="0.5" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="d-flex" style="gap: 15px;">
+                                    <div class="stats" style="width: 25%;">
+                                        <div class="stat-label">Sent</div>
+                                        <div class="stat-label">Success</div>
+                                        <div class="stat-label">Delivered</div>
+                                        <div class="stat-label">Read</div>
+                                        <div class="stat-label">Failed</div>
+                                        <div class="stat-label">Not Received</div>
+                                        <div class="stat-label">CTR</div>
+                                    </div>
+
+                                    <div class="stats" style="width: 100%;">
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ProgressBar-Container">
+                                            <div class="progress" role="progressbar" aria-label="Basic example"
+                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar w-75"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stats" style="width: 25%;">
+                                        <div class="stat-value">523</div>
+                                        <div class="stat-value">467</div>
+                                        <div class="stat-value">523</div>
+                                        <div class="stat-value">500</div>
+                                        <div class="stat-value">200</div>
+                                        <div class="stat-value">95</div>
+                                        <div class="stat-value">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="saleStatisticsContainer dark-mode-container">
+                            <div class=" p-3" style="padding-left: 10px !important;">
+                                <h1>Sale Statistics</h1>
+                                <div class="d-flex">
+                                    <div class="saleStatisticsRatingContainer d-flex flex-column">
+                                        <span>500</span>
+                                        <span>400</span>
+                                        <span>300</span>
+                                        <span>200</span>
+                                        <span>100</span>
+                                        <span>0</span>
+                                    </div>
+                                    <div
+                                        class="sale-Statistics-Rating-Progressbar-Container d-flex align-items-end justify-content-between">
+                                        <div class="d-flex flex-column">
+                                            <div class="Red-progress-bar"></div>
+                                            <div class="d-flex flex-column" style="gap: 10px;">
+                                                <span class="sale-Statistics-Rating-Progressbar-span">Leads</span>
+                                                <span class="Red-span-sale-Statistics-Rating-Progressbar">523</span>
+                                                <div class="Red-Small-ProgressBar-Container">
+                                                    <div class="progress small-progress" role="progressbar"
+                                                        aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div class="progress-bar red-small-progress-bar w-75"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="Purple-progress-bar"></div>
+                                            <div class="d-flex flex-column" style="gap: 10px;">
+                                                <span
+                                                    class="sale-Statistics-Rating-Progressbar-span">Appointement</span>
+                                                <span class="Purple-span-sale-Statistics-Rating-Progressbar">523</span>
+                                                <div class="Purple-Small-ProgressBar-Container">
+                                                    <div class="progress small-progress" role="progressbar"
+                                                        aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div class="progress-bar purple-small-progress-bar w-75">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="Green-progress-bar"></div>
+                                            <div class="d-flex flex-column" style="gap: 10px;">
+                                                <span class="sale-Statistics-Rating-Progressbar-span">Follow
+                                                    Up</span>
+                                                <span class="Green-span-sale-Statistics-Rating-Progressbar">523</span>
+                                                <div class="Green-Small-ProgressBar-Container">
+                                                    <div class="progress small-progress" role="progressbar"
+                                                        aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div class="progress-bar green-small-progress-bar w-75">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="Blue-progress-bar"></div>
+                                            <div class="d-flex flex-column" style="gap: 10px;">
+                                                <span class="sale-Statistics-Rating-Progressbar-span">Deal
+                                                    Closed</span>
+                                                <span class="Blue-span-sale-Statistics-Rating-Progressbar">523</span>
+                                                <div class="Blue-Small-ProgressBar-Container">
+                                                    <div class="progress small-progress" role="progressbar"
+                                                        aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div class="progress-bar blue-small-progress-bar w-75">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="Brown-progress-bar"></div>
+                                            <div class="d-flex flex-column" style="gap: 10px;">
+                                                <span class="sale-Statistics-Rating-Progressbar-span">Not
+                                                    Interested</span>
+                                                <span class="Brown-span-sale-Statistics-Rating-Progressbar">523</span>
+                                                <div class="Brown-Small-ProgressBar-Container">
+                                                    <div class="progress small-progress" role="progressbar"
+                                                        aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <div class="progress-bar brown-small-progress-bar w-75">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex StatisticsContentContainer">
+                        <div class="conversationCreditContainer d-flex flex-column dark-mode-container">
+                            <div class=" p-3 h-100" style="padding-top: 36px !important;">
+                                <div class="d-flex flex-column" style="gap: 15px;">
+                                    <div class="d-flex align-items-center" style="gap: 10px;">
+                                        <h1>Conversation Credits</h1>
+                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.57335 6.79077L12.7625 2.21939C13.0792 1.94048 13.0792 1.48814 12.7625 1.20923C12.4459 0.930258 11.9325 0.930258 11.6159 1.20923L7.81082 4.56125C7.81082 4.56125 7.42793 4.93901 7.0031 4.93108C6.58848 4.92334 6.1892 4.56125 6.1892 4.56125L2.38415 1.20934C2.06748 0.930372 1.55414 0.930372 1.23747 1.20934C1.07926 1.34877 1 1.53162 1 1.71442C1 1.89722 1.07926 2.08002 1.23747 2.2195L6.42667 6.79077C6.74334 7.06974 7.25668 7.06974 7.57335 6.79077Z"
+                                                fill="#626161" stroke="white" stroke-width="0.5" />
+                                        </svg>
+                                    </div>
+                                    <span>Total Credits used</span>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="semi-donut margin" style="--percentage : 80; --fill: #1A9D86 ;">
+                                        <div class="d-flex align-items-center" style="gap: 10px;">
+                                            <span>10,000</span>
+                                            <svg width="11" height="18" viewBox="0 0 17 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 3V0H0V3H5.40909C7.42127 3 9.11973 4.257 9.75954 6H0V9H9.75954C9.44231 9.87485 8.85379 10.6329 8.07482 11.1701C7.29585 11.7072 6.36464 11.9972 5.40909 12H0V15.621L8.63291 24H13.0035L3.73073 15H5.40909C7.18939 14.9977 8.91442 14.3996 10.2933 13.3066C11.6722 12.2137 12.6207 10.6926 12.9787 9H17V6H12.9787C12.7418 4.9083 12.2537 3.88273 11.5507 3H17Z"
+                                                    fill="#626161" />
+                                            </svg>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Graph-saleStatics-Container dark-mode-container">
+                            <div class=" p-3">
+                                <div class="d-flex justify-content-between">
+                                    <h1>Sale Statistics</h1>
+                                    <div>
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="Graph-saleStatisticsRatingContainer d-flex flex-column"
+                                            style=" gap: 14px;">
+                                            <span>500</span>
+                                            <span>400</span>
+                                            <span>300</span>
+                                            <span>200</span>
+                                            <span>100</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div class="Grap">
+                                            <div class="chart-area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="Months-Name-Graph-saleStatics-Container d-flex justify-content-end"
+                                        style="gap: 19px;">
+                                        <span>Jan</span>
+                                        <span>Feb</span>
+                                        <span>Mar</span>
+                                        <span>Apr</span>
+                                        <span>May</span>
+                                        <span>Jun</span>
+                                        <span>Jul</span>
+                                        <span>Aug</span>
+                                        <span>Sep</span>
+                                        <span>Oct</span>
+                                        <span>Nov</span>
+                                        <span>Dec</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex Customer-Fulfilment-Pie-Chart-Data-Container">
+                        <div class="Customer-Fulfilment-Container dark-mode-container">
+                            <div class=" p-4">
+                                <h1>Customer Fulfilment</h1>
+                                <div class="Area-graph"></div>
+                                <div
+                                    class="lastMonth-thisMonth-Container d-flex justify-content-between align-items-center">
+                                    <div class="lastMonthData">
+                                        <div class="d-flex align-items-center">
+                                            <div class="greenDot-lastMonthData"></div>
+                                            <span>Last Month</span>
+                                        </div>
+                                        <div class="lastMonthAmount d-flex">
+                                            <svg width="8" height="14" viewBox="0 0 17 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 3V0H0V3H5.40909C7.42127 3 9.11973 4.257 9.75954 6H0V9H9.75954C9.44231 9.87485 8.85379 10.6329 8.07482 11.1701C7.29585 11.7072 6.36464 11.9972 5.40909 12H0V15.621L8.63291 24H13.0035L3.73073 15H5.40909C7.18939 14.9977 8.91442 14.3996 10.2933 13.3066C11.6722 12.2137 12.6207 10.6926 12.9787 9H17V6H12.9787C12.7418 4.9083 12.2537 3.88273 11.5507 3H17Z"
+                                                    fill="#626161" />
+                                            </svg>
+                                            <p>4,087</p>
+                                        </div>
+                                    </div>
+                                    <div class="thisMonthData">
+                                        <div class="d-flex align-items-center">
+                                            <div class="greenDot-thisMonthData"></div>
+                                            <span>This Month</span>
+                                        </div>
+                                        <div class="thisMonthAmount d-flex">
+                                            <svg width="8" height="14" viewBox="0 0 17 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17 3V0H0V3H5.40909C7.42127 3 9.11973 4.257 9.75954 6H0V9H9.75954C9.44231 9.87485 8.85379 10.6329 8.07482 11.1701C7.29585 11.7072 6.36464 11.9972 5.40909 12H0V15.621L8.63291 24H13.0035L3.73073 15H5.40909C7.18939 14.9977 8.91442 14.3996 10.2933 13.3066C11.6722 12.2137 12.6207 10.6926 12.9787 9H17V6H12.9787C12.7418 4.9083 12.2537 3.88273 11.5507 3H17Z"
+                                                    fill="#626161" />
+                                            </svg>
+                                            <p>4,087</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="Pie-Chart-Data-Container d-flex justify-content-around align-items-center dark-mode-container">
+                            <div class="Pie-Chart-Containe">
+                                <div class="chart-container">
+                                    <canvas class="my-chart"></canvas>
+                                </div>
+                            </div>
+                            <div class="d-flex doneData-notDoneDataContainer">
+                                <div class="doneData">
+                                    <div class="d-flex flex-row">
+                                        <ul id="doneDatacolor-list">
+                                            <li>Lead</li>
+                                            <li>Payment Received</li>
+                                            <li>Appointment booked</li>
+                                            <li>Deal Closed</li>
+                                            <li>Follow Up</li>
+                                        </ul>
+                                        <ul class="doneData-ul">
+                                            <li>38.6%</li>
+                                            <li>22.5%</li>
+                                            <li>30.8%</li>
+                                            <li>40%</li>
+                                            <li>38.6%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="notDoneData">
+                                    <div class="d-flex flex-row notDoneData">
+                                        <ul id="notDoneDatacolor-list">
+                                            <li>Not interested</li>
+                                            <li>No Show</li>
+                                            <li>Not Connected</li>
+                                            <li>Ready to Book</li>
+                                        </ul>
+                                        <ul class="doneData-ul">
+                                            <li>38.6%</li>
+                                            <li>22.5%</li>
+                                            <li>30.8%</li>
+                                            <li>40%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="mobilelogin-with-facebook-button-container">
+                    <p class="Connect-with-WhatsApp-para">Connect WhatsApp to the wingsfly</p>
+                    <button>Login with Facebook</button>
+                </div>
+            </div>
+        </section>
+        <div class="mobileMenuContainer">
+            <div class="mobileMenuBarcontainer d-flex flex-row justify-content-between align-items-center"
+                style="max-width: 100%;">
+                <div
+                    class="Chat-option-container d-flex flex-column justify-content-between align-items-center option">
+                    <div><svg id="mySvg" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-path"
+                                d="M10.5 20C16.0228 20 20.5 15.5228 20.5 10C20.5 4.47715 16.0228 0 10.5 0C4.97715 0 0.5 4.47715 0.5 10C0.5 11.5997 0.875616 13.1116 1.54346 14.4525C1.72094 14.8088 1.78001 15.2161 1.67712 15.6006L1.08151 17.8267C0.822954 18.793 1.70701 19.677 2.67335 19.4185L4.89939 18.8229C5.28393 18.72 5.69121 18.7791 6.04753 18.9565C7.38836 19.6244 8.90032 20 10.5 20Z"
+                                fill="
+                            #9A9BB1" />
+                            <path class="gray-svg"
+                                d="M13.5 10C13.5 10.5523 13.9477 11 14.5 11C15.0523 11 15.5 10.5523 15.5 10C15.5 9.44772 15.0523 9 14.5 9C13.9477 9 13.5 9.44772 13.5 10Z"
+                                fill="#ffffff" />
+                            <path class="gray-svg"
+                                d="M9.5 10C9.5 10.5523 9.94772 11 10.5 11C11.0523 11 11.5 10.5523 11.5 10C11.5 9.44772 11.0523 9 10.5 9C9.94772 9 9.5 9.44772 9.5 10Z"
+                                fill="#ffffff" />
+                            <path class="gray-svg"
+                                d="M5.5 10C5.5 10.5523 5.94772 11 6.5 11C7.05228 11 7.5 10.5523 7.5 10C7.5 9.44772 7.05228 9 6.5 9C5.94772 9 5.5 9.44772 5.5 10Z"
+                                fill="#ffffff" />
+                        </svg>
+                    </div>
+                    <div>Chats</div>
+                </div>
+                <div
+                    class="Leads-option-container d-flex flex-column justify-content-between align-items-center option">
+                    <div><svg id="mySvg" width="24" height="21" viewBox="0 0 24 21" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.75 0.25C9.12665 0.25 7 2.37665 7 5C7 7.62335 9.12665 9.75 11.75 9.75C14.3734 9.75 16.5 7.62335 16.5 5C16.5 2.37665 14.3734 0.25 11.75 0.25ZM8.5 5C8.5 3.20507 9.95507 1.75 11.75 1.75C13.5449 1.75 15 3.20507 15 5C15 6.79493 13.5449 8.25 11.75 8.25C9.95507 8.25 8.5 6.79493 8.5 5Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path"
+                                d="M17.75 2.25C17.3358 2.25 17 2.58579 17 3C17 3.41421 17.3358 3.75 17.75 3.75C19.1265 3.75 20 4.65573 20 5.5C20 6.34427 19.1265 7.25 17.75 7.25C17.3358 7.25 17 7.58579 17 8C17 8.41421 17.3358 8.75 17.75 8.75C19.6872 8.75 21.5 7.41715 21.5 5.5C21.5 3.58285 19.6872 2.25 17.75 2.25Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path"
+                                d="M6.5 3C6.5 2.58579 6.16421 2.25 5.75 2.25C3.81278 2.25 2 3.58285 2 5.5C2 7.41715 3.81278 8.75 5.75 8.75C6.16421 8.75 6.5 8.41421 6.5 8C6.5 7.58579 6.16421 7.25 5.75 7.25C4.37351 7.25 3.5 6.34427 3.5 5.5C3.5 4.65573 4.37351 3.75 5.75 3.75C6.16421 3.75 6.5 3.41421 6.5 3Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.75 11.25C9.96573 11.25 8.31645 11.7308 7.09133 12.5475C5.87146 13.3608 5 14.5666 5 16C5 17.4334 5.87146 18.6392 7.09133 19.4525C8.31645 20.2692 9.96573 20.75 11.75 20.75C13.5343 20.75 15.1835 20.2692 16.4087 19.4525C17.6285 18.6392 18.5 17.4334 18.5 16C18.5 14.5666 17.6285 13.3608 16.4087 12.5475C15.1835 11.7308 13.5343 11.25 11.75 11.25ZM6.5 16C6.5 15.2242 6.97169 14.4301 7.92338 13.7956C8.86984 13.1646 10.2206 12.75 11.75 12.75C13.2794 12.75 14.6302 13.1646 15.5766 13.7956C16.5283 14.4301 17 15.2242 17 16C17 16.7758 16.5283 17.5699 15.5766 18.2044C14.6302 18.8354 13.2794 19.25 11.75 19.25C10.2206 19.25 8.86984 18.8354 7.92338 18.2044C6.97169 17.5699 6.5 16.7758 6.5 16Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path"
+                                d="M19.0174 12.8393C19.1061 12.4347 19.5061 12.1787 19.9107 12.2674C20.8725 12.4783 21.7393 12.8593 22.3828 13.3859C23.0258 13.912 23.5 14.6352 23.5 15.5C23.5 16.3648 23.0258 17.088 22.3828 17.6141C21.7393 18.1407 20.8725 18.5217 19.9107 18.7326C19.5061 18.8213 19.1061 18.5653 19.0174 18.1607C18.9287 17.7561 19.1847 17.3561 19.5893 17.2674C20.3817 17.0936 21.0149 16.7952 21.4329 16.4532C21.8514 16.1108 22 15.7763 22 15.5C22 15.2237 21.8514 14.8892 21.4329 14.5468C21.0149 14.2048 20.3817 13.9064 19.5893 13.7326C19.1847 13.6439 18.9287 13.2439 19.0174 12.8393Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path"
+                                d="M3.58935 12.2674C3.99395 12.1787 4.39387 12.4347 4.48259 12.8393C4.57132 13.2439 4.31525 13.6439 3.91065 13.7326C3.11829 13.9064 2.48505 14.2048 2.06712 14.5468C1.64863 14.8892 1.5 15.2237 1.5 15.5C1.5 15.7763 1.64863 16.1108 2.06712 16.4532C2.48505 16.7952 3.11829 17.0936 3.91065 17.2674C4.31525 17.3561 4.57132 17.7561 4.48259 18.1607C4.39387 18.5653 3.99395 18.8213 3.58935 18.7326C2.62746 18.5217 1.7607 18.1407 1.11719 17.6141C0.474248 17.088 0 16.3648 0 15.5C0 14.6352 0.474248 13.912 1.11719 13.3859C1.7607 12.8593 2.62746 12.4783 3.58935 12.2674Z"
+                                fill="#9A9BB1" />
+                        </svg>
+                    </div>
+                    <div>Leads</div>
+                </div>
+                <div
+                    class="Contact-option-container d-flex flex-column justify-content-between align-items-center option">
+                    <div><svg id="mySvg" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.90039 9C8.90039 6.92893 10.5793 5.25 12.6504 5.25C14.7215 5.25 16.4004 6.92893 16.4004 9C16.4004 11.0711 14.7215 12.75 12.6504 12.75C10.5793 12.75 8.90039 11.0711 8.90039 9ZM12.6504 6.75C11.4078 6.75 10.4004 7.75736 10.4004 9C10.4004 10.2426 11.4078 11.25 12.6504 11.25C13.893 11.25 14.9004 10.2426 14.9004 9C14.9004 7.75736 13.893 6.75 12.6504 6.75Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.90039 12C1.90039 6.06294 6.71333 1.25 12.6504 1.25C18.5875 1.25 23.4004 6.06294 23.4004 12C23.4004 17.9371 18.5875 22.75 12.6504 22.75C6.71333 22.75 1.90039 17.9371 1.90039 12ZM12.6504 2.75C7.54176 2.75 3.40039 6.89137 3.40039 12C3.40039 14.5456 4.42866 16.851 6.09249 18.5235C6.27289 17.5504 6.62733 16.6329 7.33876 15.8951C8.40291 14.7915 10.1046 14.25 12.6503 14.25C15.1961 14.25 16.8978 14.7915 17.9619 15.8951C18.6734 16.6329 19.0278 17.5505 19.2082 18.5236C20.8721 16.8511 21.9004 14.5456 21.9004 12C21.9004 6.89137 17.759 2.75 12.6504 2.75ZM17.8441 19.6554C17.7422 18.4435 17.479 17.5553 16.8821 16.9363C16.2327 16.2628 15.0293 15.75 12.6503 15.75C10.2714 15.75 9.068 16.2628 8.41854 16.9363C7.82166 17.5553 7.5585 18.4434 7.45662 19.6553C8.93723 20.6618 10.7251 21.25 12.6504 21.25C14.5756 21.25 16.3635 20.6618 17.8441 19.6554Z"
+                                fill="#9A9BB1" />
+                        </svg>
+                    </div>
+                    <div>Contact</div>
+                </div>
+                <div
+                    class="More-option-container d-flex flex-column justify-content-between align-items-center option">
+                    <div><svg id="mySvg" width="25" height="24" viewBox="0 0 25 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2998 7C21.2998 7.41421 20.964 7.75 20.5498 7.75L4.5498 7.75C4.13559 7.75 3.7998 7.41421 3.7998 7C3.7998 6.58579 4.13559 6.25 4.5498 6.25L20.5498 6.25C20.964 6.25 21.2998 6.58579 21.2998 7Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2998 12C21.2998 12.4142 20.964 12.75 20.5498 12.75L4.5498 12.75C4.13559 12.75 3.7998 12.4142 3.7998 12C3.7998 11.5858 4.13559 11.25 4.5498 11.25L20.5498 11.25C20.964 11.25 21.2998 11.5858 21.2998 12Z"
+                                fill="#9A9BB1" />
+                            <path class="svg-path" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.2998 17C21.2998 17.4142 20.964 17.75 20.5498 17.75L4.5498 17.75C4.13559 17.75 3.7998 17.4142 3.7998 17C3.7998 16.5858 4.13559 16.25 4.5498 16.25L20.5498 16.25C20.964 16.25 21.2998 16.5858 21.2998 17Z"
+                                fill="#9A9BB1" />
+                        </svg>
+                    </div>
+                    <div>More</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.sidebar .option').forEach(option => {
+                option.addEventListener('click', function () {
+                    document.querySelectorAll('.sidebar .option').forEach(opt => {
+                        opt.classList.remove('active');
+                        const emptyDiv = opt.querySelector('div:first-child');
+                        if (emptyDiv) {
+                            emptyDiv.classList.remove('option-transition');
+                        }
+                    });
+                    this.classList.add('active');
+                    const emptyDivClicked = this.querySelector('div:first-child');
+                    if (emptyDivClicked) {
+                        emptyDivClicked.classList.add('option-transition');
+                    }
+                });
+            });
+            const chartData = {
+                labels: ["Lead", "Payment Received", "Appointment booked", "Deal Closed", "Follow Up", "Not interested", "No Show", "Not Connected", "Ready to Book"],
+                data: [38.6, 22.5, 30.8, 40, 38.6, 22.5, 30.8, 8.1, 8.1],
+                backgroundColor: ["#9be2f4", "#00c7b0", "#3e4bf9", "#54d006", "#91ac07", "#ada9a8", "#ff7a7b", "#ff9efd", "#e39e9f"],
+            };
+
+            const myChart = document.querySelector(".my-chart");
+            const ul = document.querySelector(".programming-stats .details ul");
+
+            new Chart(myChart, {
+                type: "doughnut",
+                data: {
+                    labels: chartData.labels,
+                    datasets: [
+                        {
+                            label: "Information",
+                            data: chartData.data,
+                            backgroundColor: chartData.backgroundColor,
+                        },
+                    ],
+                },
+                options: {
+                    borderWidth: 1,
+                    borderRadius: 5,
+                    hoverBorderWidth: 0,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                        afterDraw: function (chart) {
+                            var ctx = chart.ctx;
+                            ctx.font = '18px Arial';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'iddle';
+                            var total = chart.config.data.datasets[0].data.reduce(function (a, b) {
+                                return a + b;
+                            }, 0);
+                            chart.config.data.datasets[0].data.forEach(function (value, index) {
+                                var percentage = ((value / total) * 100).toFixed(2) + '%';
+                                var arc = chart.getDatasetMeta(0).data[index];
+                                var angle = chart.getAngle(index);
+                                ctx.save();
+                                ctx.translate(arc.x, arc.y);
+                                ctx.rotate(angle);
+                                ctx.fillStyle = chart.config.data.datasets[0].backgroundColor[index];
+                                ctx.text(percentage, 0, 0);
+                                ctx.restore();
+                            });
+
+                        },
+                    },
+                },
+            });
+            // function toggleDarkMode() {
+            //     document.body.classList.toggle('dark-mode');
+            // }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            let primaryColor = getComputedStyle(document.documentElement)
+                .getPropertyValue("--color-primary")
+                .trim();
+
+            let labelColor = getComputedStyle(document.documentElement)
+                .getPropertyValue("--color-label")
+                .trim();
+
+            let fontFamily = getComputedStyle(document.documentElement)
+                .getPropertyValue("--font-family")
+                .trim();
+
+            let barOptions = {
+                chart: {
+                    type: "area",
+                    toolbar: {
+                        show: false,
+                    },
+                    zoom: {
+                        enabled: false,
+                    },
+                    height: 180,
+                    background: 'transparent',
+                },
+                dataLabels: {
+                    enabled: false,
+                },
+                series: [{
+                    name: "New Visitors",
+                    data: [50, 200, 100, 300, 150, 400, 250, 350, 200, 300, 100, 250],
+                }],
+                colors: [primaryColor],
+                fill: {
+                    type: "gradient",
+                    gradient: {
+                        type: "vertical",
+                        opacityFrom: 1,
+                        opacityTo: 0,
+                        stops: [0, 100],
+                        colorStops: [],
+                    },
+                },
+                stroke: {
+                    colors: [primaryColor],
+                    curve: "straight",
+                    lineCap: "butt",
+                },
+                grid: {
+                    borderColor: "rgba(0, 0, 0, 0)",
+                    padding: {
+                        top: -30,
+                        right: 0,
+                        bottom: -8,
+                        left: 12,
+                    },
+                },
+                markers: {
+                    strokeColors: primaryColor,
+                },
+                yaxis: {
+                    show: false,
+                },
+                xaxis: {
+                    labels: {
+                        show: true,
+                        floating: true,
+                        style: {
+                            colors: labelColor,
+                            fontFamily: fontFamily,
+                        },
+                    },
+                    axisBorder: {
+                        show: false,
+                    },
+                    crosshairs: {
+                        show: false,
+                    },
+                    categories: [
+                        "January", "February", "March",
+                        "April", "May", "June",
+                        "July", "August", "September",
+                        "October", "November", "December"
+                    ],
+                },
+            };
+
+            let chart = new ApexCharts(document.querySelector(".chart-area"), barOptions);
+            chart.render();
+            document.querySelectorAll('.mobileMenuContainer .option').forEach(option => {
+            option.addEventListener('click', function () {
+                document.querySelectorAll('.mobileMenuContainer .option').forEach(opt => {
+                    opt.classList.remove('menuBaractive');
+                });
+                this.classList.add('menuBaractive');
+            });
+        });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="Container">
+    <aside>
+      <div class="sidebar">
+        <div class="aiLogo"></div>
+        <div class="menuContainer">
+          <div class="options">
+            <div class="d-flex align-items-center Dashboard option">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M8.557 2.75H4.682A1.932 1.932 0 0 0 2.75 4.682v3.875a1.942 1.942 0 0 0 1.932 1.942h3.875a1.942 1.942 0 0 0 1.942-1.942V4.682A1.942 1.942 0 0 0 8.557 2.75m10.761 0h-3.875a1.942 1.942 0 0 0-1.942 1.932v3.875a1.943 1.943 0 0 0 1.942 1.942h3.875a1.942 1.942 0 0 0 1.932-1.942V4.682a1.932 1.932 0 0 0-1.932-1.932M8.557 13.5H4.682a1.943 1.943 0 0 0-1.932 1.943v3.875a1.932 1.932 0 0 0 1.932 1.932h3.875a1.942 1.942 0 0 0 1.942-1.932v-3.875a1.942 1.942 0 0 0-1.942-1.942m8.818-.001a3.875 3.875 0 1 0 0 7.75a3.875 3.875 0 0 0 0-7.75" />
+                </svg>
+              </div>
+            </div>
+            <div class="Contact option">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <path fill="white"
+                    d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2" />
+                </svg>
+              </div>
+            </div>
+            <div class="Live-Chat option">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36">
+                  <path fill="white"
+                    d="M18 2.5c-8.82 0-16 6.28-16 14s7.18 14 16 14a18 18 0 0 0 4.88-.68l5.53 3.52a1 1 0 0 0 1.54-.84v-6.73a13 13 0 0 0 4-9.27C34 8.78 26.82 2.5 18 2.5m8 14a1 1 0 0 1-1 1H11a1 1 0 0 1 0-2h14a1 1 0 0 1 1 1m-3.25 5a1 1 0 0 1-1 1h-7.5a1 1 0 0 1 0-2h7.5a1 1 0 0 1 1 1m-12.47-10a1 1 0 0 1 1-1h13.44a1 1 0 0 1 0 2H11.28a1 1 0 0 1-1-1"
+                    class="clr-i-solid clr-i-solid-path-1" />
+                  <path fill="none" d="M0 0h36v36H0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="Leads option">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
+                  <path fill="white"
+                    d="M21.066 20.667c1.227-.682 1.068-3.31-.354-5.874c-.61-1.104-1.36-1.998-2.11-2.623a5.229 5.229 0 0 1-3.1 1.03a5.23 5.23 0 0 1-3.105-1.03c-.75.625-1.498 1.52-2.11 2.623c-1.423 2.563-1.58 5.192-.35 5.874c.548.312 1.126.078 1.722-.496a10.51 10.51 0 0 0-.167 1.874c0 2.938 1.14 5.312 2.543 5.312c.846 0 1.265-.865 1.466-2.188c.2 1.314.62 2.188 1.46 2.188c1.397 0 2.546-2.375 2.546-5.312c0-.66-.062-1.29-.168-1.873c.6.575 1.176.813 1.726.497zM15.5 12.2a4.279 4.279 0 1 0-.003-8.557A4.279 4.279 0 0 0 15.5 12.2m8.594 2.714a3.514 3.514 0 0 0 0-7.025a3.513 3.513 0 1 0 .001 7.027zm4.28 2.13c-.502-.908-1.116-1.642-1.732-2.155a4.3 4.3 0 0 1-2.546.845c-.756 0-1.46-.207-2.076-.55c.496 1.093.803 2.2.86 3.19c.094 1.516-.38 2.64-1.328 3.165a2.017 2.017 0 0 1-.653.224c-.057.392-.096.8-.096 1.23c0 2.413.935 4.362 2.088 4.362c.694 0 1.04-.71 1.204-1.796c.163 1.08.508 1.796 1.2 1.796c1.145 0 2.09-1.95 2.09-4.36c0-.543-.053-1.06-.14-1.54c.492.473.966.668 1.418.408c1.007-.56.877-2.718-.29-4.82zm-21.468-2.13a3.512 3.512 0 1 0-3.514-3.512a3.515 3.515 0 0 0 3.514 3.514zm2.535 6.622c-1.592-.885-1.738-3.524-.456-6.354a4.242 4.242 0 0 1-2.078.553c-.956 0-1.832-.32-2.55-.846c-.615.512-1.228 1.246-1.732 2.153c-1.167 2.104-1.295 4.262-.287 4.82c.45.258.925.065 1.414-.406a8.83 8.83 0 0 0-.135 1.538c0 2.412.935 4.36 2.088 4.36c.694 0 1.04-.71 1.204-1.795c.165 1.08.51 1.796 1.2 1.796c1.147 0 2.09-1.95 2.09-4.36c0-.433-.04-.842-.097-1.234a2.02 2.02 0 0 1-.66-.226z" />
+                </svg>
+              </div>
+            </div>
+            <div class="d-flex align-items-center Meeting-schedule option">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <path fill="white"
+                    d="M5 8h14V6H5zm0 0V6zm0 14q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v5.675q-.475-.225-.975-.375T19 11.075V10H5v10h6.3q.175.55.413 1.05t.562.95zm13 1q-2.075 0-3.537-1.463T13 18t1.463-3.537T18 13t3.538 1.463T23 18t-1.463 3.538T18 23m1.675-2.625l.7-.7L18.5 17.8V15h-1v3.2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="d-flex align-items-center chatBot option">
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    color="white">
+                    <path d="M4 15.5a2 2 0 1 1 0-4m16 4a2 2 0 1 0 0-4M7 7V4m10 3V4" />
+                    <circle cx="7" cy="3" r="1" />
+                    <circle cx="17" cy="3" r="1" />
+                    <path
+                      d="M13.5 7h-3c-2.828 0-4.243 0-5.121.909S4.5 10.281 4.5 13.207s0 4.389.879 5.298c.878.909 2.293.909 5.121.909h1.025c.792 0 1.071.163 1.617.757c.603.657 1.537 1.534 2.382 1.738c1.201.29 1.336-.111 1.068-1.256c-.076-.326-.267-.847-.066-1.151c.113-.17.3-.212.675-.296c.591-.132 1.079-.348 1.42-.701c.879-.91.879-2.372.879-5.298s0-4.389-.879-5.298C17.743 7 16.328 7 13.5 7" />
+                    <path d="M9.5 15c.57.607 1.478 1 2.5 1s1.93-.393 2.5-1m-5.491-4H9m6.009 0H15" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="Nurturing option">
+              <div class="d-flex">
+                <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M31.9739 18.4927C31.9657 18.3704 31.9068 18.2549 31.8082 18.1683C31.7096 18.0816 31.5782 18.0298 31.439 18.0227C27.7577 17.8352 24.8019 18.819 23.5316 20.6615C22.6924 21.8797 22.6938 23.3591 23.5202 24.7704C23.0497 25.2625 22.706 25.8382 22.5124 26.458L21.3553 25.4373C21.9114 24.4167 21.8901 23.3529 21.2841 22.4691C20.3453 21.1072 18.1782 20.3771 15.4876 20.5159C15.3484 20.523 15.2171 20.5749 15.1185 20.6615C15.0199 20.7481 14.9609 20.8636 14.9528 20.9859C14.7942 23.3504 15.6256 25.2548 17.1754 26.0799C17.6868 26.3545 18.2745 26.4998 18.8738 26.4999C19.4555 26.4935 20.0281 26.3724 20.5494 26.1455L22.3275 27.708V29.5C22.3275 29.6326 22.3874 29.7598 22.4942 29.8535C22.6009 29.9473 22.7456 30 22.8965 30C23.0474 30 23.1921 29.9473 23.2988 29.8535C23.4055 29.7598 23.4655 29.6326 23.4655 29.5V27.6568C23.4629 26.8613 23.7709 26.0891 24.3381 25.4692C25.0699 25.8053 25.8816 25.9852 26.7072 25.9942C27.5055 25.9965 28.2889 25.8048 28.9711 25.4405C31.0678 24.3254 32.1901 21.7278 31.9739 18.4927ZM17.7621 25.2248C16.6711 24.6442 16.0538 23.2697 16.0687 21.4997C18.0829 21.4847 19.6469 22.0291 20.3076 22.9879C20.6526 23.4879 20.7088 24.071 20.4826 24.6717L18.7465 23.146C18.6389 23.0562 18.4957 23.0068 18.3473 23.0085C18.1989 23.0102 18.0572 23.0627 17.9522 23.1549C17.8473 23.2471 17.7875 23.3717 17.7856 23.5021C17.7837 23.6325 17.8399 23.7584 17.9421 23.8529L19.6782 25.3786C18.9947 25.5773 18.3318 25.528 17.7621 25.2248ZM28.3815 24.586C27.4284 25.0929 26.3082 25.1317 25.1703 24.7111L28.9889 21.3547C29.0911 21.2601 29.1472 21.1343 29.1453 21.0039C29.1434 20.8735 29.0836 20.7489 28.9787 20.6567C28.8738 20.5645 28.732 20.512 28.5836 20.5103C28.4353 20.5086 28.292 20.558 28.1845 20.6478L24.3652 23.9998C23.8844 22.9997 23.9278 22.0147 24.5074 21.1778C25.4989 19.7402 27.8502 18.939 30.8608 19.0008C30.9291 21.6459 30.0187 23.7148 28.3815 24.586Z"
+                    fill="white" />
+                  <path
+                    d="M6.4 7C8.46933 7 10.1333 5.44 10.1333 3.5C10.1333 1.56 8.46933 0 6.4 0C4.33067 0 2.66667 1.56 2.66667 3.5C2.66667 5.44 4.33067 7 6.4 7ZM10.6667 30C10.6667 31.1 9.70667 32 8.53333 32H4.26667C3.09333 32 2.13333 31.1 2.13333 30V22C0.96 22 0 21.1 0 20V13C0 10.8 1.92 9 4.26667 9H8.53333C10.88 9 12.8 10.8 12.8 13V20C12.8 21.1 11.84 22 10.6667 22V30Z"
+                    fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logout-box d-flex flex-column">
+          <div class="d-flex justify-content-center">
+            <div class="logo"></div>
+          </div>
+          <div class="d-flex justify-content-center logout flex-column align-items-center">
+            <svg width="15" height="15" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_59_898)">
+                <path
+                  d="M21.25 10L19.4875 11.7625L21.4625 13.75H11.25V16.25H21.4625L19.4875 18.225L21.25 20L26.25 15L21.25 10ZM6.25 6.25H15V3.75H6.25C4.875 3.75 3.75 4.875 3.75 6.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H15V23.75H6.25V6.25Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_59_898">
+                  <rect width="30" height="30" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="logoutText">Logout</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="mainContentContainer">
+      <div class="navbar">
+        <h5>Calendar</h5>
+        <div class="notificationsProfileContainer">
+          <div class="d-flex  justify-content-between align-items-center notificationSvgContainer">
+            <div style="position: relative">
+              <svg width="20" height="22" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0277 0.25C7.73472 0.25 5.80843 1.97411 5.55522 4.25306L4.5 13.75H1.5C0.671573 13.75 0 14.4216 0 15.25V16.75C0 17.5784 0.671573 18.25 1.5 18.25H22.5C23.3284 18.25 24 17.5784 24 16.75V15.25C24 14.4216 23.3284 13.75 22.5 13.75H19.5L18.4448 4.25306C18.1916 1.97411 16.2653 0.25 13.9723 0.25H10.0277Z"
+                  fill="#848484" />
+                <rect opacity="0.3" x="9" y="19.75" width="6" height="6" rx="2.25" fill="#848484" />
+              </svg>
+            </div>
+            <div class="notifyCount d-flex align-items-center justify-content-center">
+              <span>2</span>
+            </div>
+            <div class="navbarLogo"></div>
+            <div class="justify-content-between align-items-center profileContainer">
+              <div class="Profile"><span>Zahoor ahh</span></div>
+              <svg width="17" height="17" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 18.6C15.0258 18.6 19.1 14.5258 19.1 9.5C19.1 4.47421 15.0258 0.4 10 0.4C4.97421 0.4 0.9 4.47421 0.9 9.5C0.9 14.5258 4.97421 18.6 10 18.6Z"
+                  stroke="#5C5C5C" stroke-width="0.2" />
+                <path
+                  d="M10 10.2929L7.73162 7.64645C7.56425 7.45118 7.29289 7.45118 7.12553 7.64645C6.95816 7.84171 6.95816 8.15829 7.12553 8.35355L9.69695 11.3536C9.86432 11.5488 10.1357 11.5488 10.303 11.3536L12.8745 8.35355C13.0418 8.15829 13.0418 7.84171 12.8745 7.64645C12.7071 7.45118 12.4358 7.45118 12.2684 7.64645L10 10.2929Z"
+                  fill="#565656" />
+                <mask id="mask0_55_601" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="7" y="7" width="6"
+                  height="5">
+                  <path
+                    d="M10 10.2929L7.73162 7.64645C7.56425 7.45118 7.29289 7.45118 7.12553 7.64645C6.95816 7.84171 6.95816 8.15829 7.12553 8.35355L9.69695 11.3536C9.86432 11.5488 10.1357 11.5488 10.303 11.3536L12.8745 8.35355C13.0418 8.15829 13.0418 7.84171 12.8745 7.64645C12.7071 7.45118 12.4358 7.45118 12.2684 7.64645L10 10.2929Z"
+                    fill="white" />
+                </mask>
+                <g mask="url(#mask0_55_601)"></g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!--mobile content-->
+
+      </div>
+      <div class="Mobile-navbar-container">
+        <div class="Mobile-navbar d-flex justify-content-between align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="10"
+            width="10"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+          </svg>
+          <h6>Calendar</h6>
+          <div class="d-flex align-items-center justify-content-between" style="      width: 80px;">
+            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8 0.809509C5.7196 0.809509 3.80073 2.51752 3.53648 4.78256L3 9.38094H13L12.4635 4.78256C12.1993 2.51752 10.2804 0.809509 8 0.809509ZM1.42857 9.38095C0.639593 9.38095 0 10.0205 0 10.8095C0 11.5985 0.639593 12.2381 1.42857 12.2381H14.5714C15.3604 12.2381 16 11.5985 16 10.8095C16 10.0205 15.3604 9.38095 14.5714 9.38095H1.42857Z"
+                fill="#1C1C1C" />
+              <circle cx="8.5" cy="15.5" r="2.5" fill="#1C1C1C" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11.5 4C12.3284 4 13 3.32843 13 2.5C13 1.67157 12.3284 1 11.5 1C10.6716 1 10 1.67157 10 2.5C10 3.32843 10.6716 4 11.5 4Z"
+                fill="#E22828" />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.58317 2.25C5.55609 2.25 2.2915 5.51459 2.2915 9.54167C2.2915 13.5687 5.55609 16.8333 9.58317 16.8333C13.6102 16.8333 16.8748 13.5687 16.8748 9.54167C16.8748 5.51459 13.6102 2.25 9.58317 2.25ZM1.0415 9.54167C1.0415 4.82423 4.86574 1 9.58317 1C14.3006 1 18.1248 4.82423 18.1248 9.54167C18.1248 11.6754 17.3424 13.6264 16.0489 15.1235L18.7751 17.8497C19.0192 18.0938 19.0192 18.4895 18.7751 18.7336C18.531 18.9777 18.1353 18.9777 17.8912 18.7336L15.165 16.0074C13.668 17.3009 11.7169 18.0833 9.58317 18.0833C4.86574 18.0833 1.0415 14.2591 1.0415 9.54167Z"
+                fill="#1C1C1C" />
+            </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 9H17.5M2.5 4H17.5M2.5 14H17.5" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="Content">
+        <div class="calendarScrollBarContainer">
+          <div class="Filters-bar">
+            <div class="d-flex justify-content-between custom-border">
+              <div class="d-flex  buttons-container align-items-center">
+                <button class="Event-Type-Button">Events Type</button>
+                <button class="Schedule-Event-Button">Schedule Events</button>
+              </div>
+              <div class="search-container-custom-width">
+                <div class="search-container">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                      stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <input type="text" placeholder="Search" class="colorful-placeholder">
+                </div>
+                <button class="Filters-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10H15M2.5 5L17.5 5M7.5 15H12.5" stroke="#344054" stroke-width="1.67"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Filters</button>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Info-Container d-flex align-items-center">
+            <div class="Appointments">Appointments</div>
+            <div class="Follow-Up">Follow Up</div>
+            <div class="Past-Appointment">Past Appointment</div>
+            <div class="Post-Appointment">Post Appointment</div>
+            <div class="Post-Follow-Up">Post Follow Up</div>
+            <div class="Date-Range">
+              <div class="d-flex align-items-center" style="gap: 5px;">
+                Date Range<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.01025 1.33734L6.3047 6.65234L11.6197 1.3579" stroke="#3B3B3B" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <button>Filter</button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="Arrow" height="15" width="15"
+              fill="
+        #6B6B6B"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+          </div>
+          <div class="Date-Container">
+            <span>Sunday , 02 june 2024</span>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Appointment-Details-Container d-flex justify-content-around align-items-center">
+            <div class="d-flex align-items-center justify-content-between Appointment-Details">
+              <div class="Time-Container d-flex align-items-center">
+                <div class="color-div"></div>
+                <div class="Time">11:30 AM-12:30 PM</div>
+              </div>
+              <div class="Name-container">
+                <p>Dr Jaya Deshmukh</p>
+                <h6>Event Type 60 Min Business Growth Meeting</h6>
+              </div>
+              <div class="More-Details">
+                <div class="d-flex align-items-center">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                  <p>Details</p>
+                </div>
+              </div>
+              <div class="Mobile-Time-Container">
+                <p>11:30</p>
+                <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.125 15.9375L13.0625 10L7.125 4.0625" stroke="#999191" stroke-width="1.1875"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+          </div>
+          <div class="Details-Container">
+            <div class="d-flex calendarCustomGap">
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <button><span>Mark as no-show</span></button>
+                <div class="d-flex flex-column" style="gap: 10px;">
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.750122H5.25C2.76472 0.750122 0.75 2.76484 0.75 5.25012V14.7501C0.75 17.2354 2.76472 19.2501 5.25 19.2501H14.75C17.2353 19.2501 19.25 17.2354 19.25 14.7501V10.0001"
+                        stroke="#0B2FEF" stroke-width="1.5" stroke-linecap="round" />
+                      <path
+                        d="M13.3787 2.12132C14.5503 0.949747 16.4497 0.949747 17.6213 2.12132L17.7981 2.2981C18.9697 3.46967 18.9697 5.36916 17.7981 6.54074L10.5807 13.7581C10.3326 14.0063 10.0053 14.1595 9.65585 14.1913L7.12795 14.4211C6.19504 14.5059 5.4135 13.7244 5.4983 12.7915L5.72811 10.2636C5.75988 9.9141 5.91317 9.58683 6.16129 9.33871L13.3787 2.12132Z"
+                        stroke="#0B2FEF" stroke-width="1.5" />
+                      <path d="M12.5 3.125V3.125C13.2982 5.12056 14.8794 6.70178 16.875 7.5V7.5" stroke="#0B2FEF"
+                        stroke-width="1.5" stroke-linecap="square" />
+                    </svg>
+                    <span>Edit Appointment</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.83333 6.5L20.1667 6.5M1 1L24 1M8.66667 12H16.3333" stroke="#0B2FEF"
+                        stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cancel</span>
+                  </div>
+                  <div class="calendarDetails">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M3.06659 10.8333L2.62659 11.2767C2.74364 11.3927 2.90178 11.4578 3.06659 11.4578C3.2314 11.4578 3.38954 11.3927 3.50659 11.2767L3.06659 10.8333ZM4.90659 9.88834C5.02439 9.77143 5.09092 9.6125 5.09155 9.44653C5.09217 9.28056 5.02684 9.12114 4.90993 9.00334C4.85204 8.94501 4.78322 8.89866 4.70742 8.86692C4.63161 8.83519 4.5503 8.8187 4.46812 8.81839C4.30215 8.81776 4.14273 8.88309 4.02493 9.00001L4.90659 9.88834ZM2.10659 9.00001C1.98825 8.88656 1.83008 8.82415 1.66615 8.82623C1.50223 8.8283 1.34569 8.8947 1.23026 9.01111C1.11483 9.12752 1.04976 9.28463 1.04908 9.44856C1.04839 9.61249 1.11214 9.77014 1.22659 9.88751L2.10659 9.00001ZM15.5133 6.16001C15.5552 6.23215 15.6111 6.29517 15.6777 6.34536C15.7443 6.39555 15.8203 6.4319 15.9012 6.45225C15.9822 6.4726 16.0663 6.47655 16.1488 6.46387C16.2312 6.45119 16.3103 6.42212 16.3813 6.37839C16.4524 6.33467 16.514 6.27716 16.5624 6.20926C16.6109 6.14136 16.6453 6.06445 16.6635 5.98305C16.6818 5.90165 16.6836 5.81742 16.6688 5.73532C16.654 5.65322 16.623 5.57491 16.5774 5.50501L15.5133 6.16001ZM10.0658 1.87501C5.85993 1.87501 2.44076 5.25918 2.44076 9.44418H3.69076C3.69076 5.95918 6.54076 3.12501 10.0658 3.12501V1.87501ZM2.44076 9.44418V10.8333H3.69076V9.44418H2.44076ZM3.50743 11.2775L4.90659 9.88834L4.02493 9.00001L2.62493 10.3892L3.50743 11.2775ZM3.50743 10.39L2.10659 9.00001L1.22576 9.88751L2.62576 11.2758L3.50743 10.39ZM16.5774 5.50668C15.8933 4.39509 14.9355 3.47754 13.7956 2.84172C12.6557 2.2059 11.371 1.87306 10.0658 1.87501V3.12501C11.1576 3.12274 12.2327 3.40066 13.1864 3.93219C14.1402 4.46371 14.9416 5.23106 15.5141 6.16084L16.5774 5.50668ZM16.9283 9.16668L17.3674 8.72251C17.2504 8.60699 17.0927 8.54221 16.9283 8.54221C16.7639 8.54221 16.6061 8.60699 16.4891 8.72251L16.9283 9.16668ZM15.0833 10.1108C15.0249 10.1686 14.9784 10.2372 14.9466 10.3129C14.9147 10.3886 14.8981 10.4698 14.8976 10.5519C14.8967 10.7177 14.9617 10.8771 15.0783 10.995C15.1948 11.1129 15.3535 11.1797 15.5193 11.1806C15.6851 11.1816 15.8445 11.1166 15.9624 11L15.0833 10.1108ZM17.8941 11C17.9521 11.0592 18.0214 11.1063 18.0978 11.1385C18.1742 11.1707 18.2563 11.1874 18.3392 11.1876C18.4222 11.1877 18.5043 11.1714 18.5809 11.1395C18.6574 11.1076 18.7269 11.0608 18.7851 11.0018C18.8434 10.9428 18.8894 10.8728 18.9203 10.7958C18.9513 10.7189 18.9666 10.6366 18.9654 10.5537C18.9642 10.4707 18.9466 10.3889 18.9134 10.3128C18.8803 10.2368 18.8324 10.1682 18.7724 10.1108L17.8941 11ZM4.43159 13.8383C4.34451 13.6972 4.20494 13.5965 4.04358 13.5583C3.88222 13.5201 3.71229 13.5475 3.57118 13.6346C3.43006 13.7217 3.32931 13.8612 3.2911 14.0226C3.25289 14.184 3.28035 14.3539 3.36743 14.495L4.43159 13.8383ZM9.90243 18.125C14.1208 18.125 17.5524 14.7433 17.5524 10.5558H16.3024C16.3024 14.0392 13.4441 16.875 9.90243 16.875V18.125ZM17.5524 10.5558V9.16668H16.3024V10.5558H17.5524ZM16.4891 8.72251L15.0833 10.1108L15.9624 11L17.3674 9.61084L16.4891 8.72251ZM16.4891 9.61084L17.8941 11L18.7724 10.1108L17.3674 8.72251L16.4891 9.61084ZM3.36659 14.4942C4.05528 15.607 5.01743 16.5249 6.16137 17.1604C7.30531 17.796 8.59295 18.1281 9.90159 18.125V16.875C8.80629 16.8781 7.72845 16.6006 6.77078 16.069C5.8131 15.5375 5.00834 14.7695 4.43159 13.8383L3.36659 14.4942Z"
+                        fill="#0B2FEF" />
+                    </svg>
+                    <span>Schedule Invitee Again</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column" style="gap: 20px;">
+                <div class="calendarDetailsEmailContianer">
+                  <span>Email Adress</span>
+                  <p>Kamran458@gmail.com</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Location</span>
+                  <p>Blue area stret road india</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Question</span>
+                  <p>What is the reason for call?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>Weight loss</span>
+                  <p>Have you tried anything before for your weight loss/weight gain?</p>
+                </div>
+                <div class="calendarDetailsEmailContianer">
+                  <span>What are your current health problems?</span>
+                  <p>Tiredness, Belly fat, Poor digestion, Stress</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const container = document.querySelector('.Appointment-Info-Container');
+      let activeHover = null;
+
+      function addHoverDiv(target) {
+        if (activeHover) {
+          activeHover.remove();
+        }
+        const hoverDiv = document.createElement('div');
+        hoverDiv.classList.add('Appointment-hover');
+        target.appendChild(hoverDiv);
+        activeHover = hoverDiv;
+      }
+
+      const firstDiv = container.querySelector('.Appointments');
+      if (firstDiv) {
+        addHoverDiv(firstDiv);
+        firstDiv.style.color = '#25a0e1';
+      }
+
+      container.addEventListener('click', (e) => {
+        const targetDiv = e.target.closest('.Appointment-Info-Container > div');
+        if (targetDiv) {
+          if (activeHover) {
+            activeHover.parentElement.style.color = '#3b3b3b';
+          }
+          addHoverDiv(targetDiv);
+          targetDiv.style.color = '#25a0e1';
+        }
+      });
+
+      document.querySelectorAll('.sidebar .option').forEach(option => {
+        option.addEventListener('click', function () {
+          document.querySelectorAll('.sidebar .option').forEach(opt => {
+            opt.classList.remove('active');
+            const emptyDiv = opt.querySelector('div:first-child');
+            if (emptyDiv) {
+              emptyDiv.classList.remove('option-transition');
+            }
+          });
+          this.classList.add('active');
+          const emptyDivClicked = this.querySelector('div:first-child');
+          if (emptyDivClicked) {
+            emptyDivClicked.classList.add('option-transition');
+          }
+        });
+      });
+
+      // Handling multiple Name-container elements
+      const nameContainers = document.querySelectorAll(".Name-container");
+      const detailsContainers = document.querySelectorAll(".Details-Container");
+
+      if (nameContainers.length && detailsContainers.length) {
+        nameContainers.forEach((nameContainer, index) => {
+          const detailsContainer = detailsContainers[index];
+          nameContainer.style.color = '#3b3b3b';
+          detailsContainer.style.display = 'none';
+
+          nameContainer.addEventListener("click", function () {
+            if (detailsContainer.style.display === "none") {
+              detailsContainer.style.display = "block";
+              nameContainer.style.color = "#25a0e1";
+            } else {
+              detailsContainer.style.display = "none";
+              nameContainer.style.color = "#3b3b3b";
+            }
+          });
+        });
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
