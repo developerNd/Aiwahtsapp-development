@@ -934,14 +934,16 @@ selects.forEach((select) => {
                     data: [100, 50, 300, 500, 400, 300, 350, 300, 250, 200, 300, 400],
                     backgroundColor: gradient,
                     borderColor: 'rgb(157 255 185)',
-                    borderWidth: 1,
+                    // borderColor: '#046151',
+                    borderWidth: 2,
                     // pointBackgroundColor: 'rgba(255, 206, 86, 1)',
-                    pointBorderColor: '#fff',
+                    pointBackgroundColor: 'rgb(157 255 185)',
+                    // pointBorderColor: '#fff',
                     pointHoverBackgroundColor: '#fff',
                     pointHoverBorderColor: 'rgba(255, 206, 86, 1)',
                     borderJoinStyle: 'round',
                     fill: true,
-                    showLine: false
+                    showLine: true
                 }]
             },
             options: {
@@ -951,6 +953,9 @@ selects.forEach((select) => {
                     x: {
                         grid: {
                             display: false // Disable vertical grid lines
+                        },
+                        ticks: {
+                            // color: '#ff0000' // set x-axis labels color to red
                         }
                     },
                     y: {
@@ -959,7 +964,8 @@ selects.forEach((select) => {
                             display: false // Disable horizontal grid lines
                         },
                         ticks: {
-                            stepSize: 100 // Customize the y-axis labels
+                            stepSize: 100, // Customize the y-axis labels
+                            // color: '#0000ff' // set y-axis labels color to blue
                         }
                     }
                 },
@@ -969,6 +975,7 @@ selects.forEach((select) => {
                         position: 'top',
                         labels: {
                             usePointStyle: true,
+                            color: '#00ff00' // set legend text color to green
                         }
                     },
                 },
