@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Statistics Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 80%;
+            height: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="saleStatisticsChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('saleStatisticsChart').getContext('2d');
+        
+        // Create gradient fill
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(190, 247, 192, 1)');
+        gradient.addColorStop(1, 'rgba(190, 247, 192, 0)');
+        
+        const saleStatisticsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'New Visitors',
+                    data: [100, 50, 300, 500, 400, 300, 350, 300, 250, 200, 300, 400],
+                    backgroundColor: gradient,
+                    borderColor: 'rgb(157 255 185)',
+                    borderWidth: 1,
+                    // pointBackgroundColor: 'rgba(255, 206, 86, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(255, 206, 86, 1)',
+                    borderJoinStyle: 'round',
+                    fill: true,
+                    showLine: false
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        grid: {
+                            display: false // Disable vertical grid lines
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false // Disable horizontal grid lines
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                        }
+                    },
+                },
+                elements: {
+                    line: {
+                        tension: 0, // Smooths the line
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
