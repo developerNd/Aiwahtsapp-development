@@ -1670,6 +1670,7 @@ color: #3b3b3b;
   background-color: #064d40;
   border-radius: 5px;
   width: 10px;
+  z-index: 111;
 }
 
 .content::-webkit-scrollbar-track {
@@ -1764,9 +1765,9 @@ color: #3b3b3b;
   fill: rgba(77, 67, 67, 1); 
 }
 
-.dark-mode .svg-path {
+/* .dark-mode .svg-path {
   fill: #fff; 
-}
+} */
 .totalSales,
 .apportionaty,
 .no-ofSale {
@@ -2342,8 +2343,20 @@ font-size: 0.9rem;
   }
 }
 @media (max-width: 768px) {
+  .dark-mode {
+    --base: rgba(0, 0, 0, 1);
+    --text: #ffffff;
+  }
+
   body {
     background-color: #ececec !important;
+  }
+  .dark-mode-container.dark-mode{
+    background-color: var(--base);
+    border: 1px solid #fff;
+  }
+  .circles{
+    display: none;
   }
   aside,
   .navbar h5,
@@ -2360,13 +2373,13 @@ font-size: 0.9rem;
   .menuLogoContainer{
     display: block;
   }
-.mobileAiLogo{
+ .mobileAiLogo{
   height: 15px;
   width: 15px;
   background-image: url(Images/Ai-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
-}
+  }
   .menu-logo-container,
   .profileImgContainer,
   .searchContainer,
@@ -2701,7 +2714,7 @@ font-size: 0.9rem;
     height: 50px;
     width: 66px;
   }
-  .Chat-option-container div,
+  /* .Chat-option-container div,
   .Leads-option-container div,
   .Contact-option-container div,
   .More-option-container div {
@@ -2710,7 +2723,7 @@ font-size: 0.9rem;
     font-size: 0.65rem;
     line-height: 18px;
     color: #9a9bb1;
-  }
+  } */
   /* .active {
     height: 60px;
     background-color: #044338;
@@ -2724,6 +2737,10 @@ font-size: 0.9rem;
   }
   svg .svg-path {
     transition: fill 0.3s;
+    
+  }
+  .mobileMenuBarcontainer svg .svg-path {
+    fill: #9a9bb1;
   }
 
   .option.active .svg-path {
@@ -2892,10 +2909,10 @@ font-size: 0.9rem;
   .Container {
     background-color: #d9d9d9;
   }
-  .content-container {
+  /* .content-container {
     width: 100vw;
     padding: 0px 10px 10px 10px;
-  }
+  } */
   .navbar,
   .More-Details,
   .Time {
@@ -3066,6 +3083,7 @@ font-size: 0.9rem;
   .content-container {
     width: 100vw;
     padding: 0px 0px 10px 10px;
+    /* background-color: rgba(0, 0, 0, 1); */
   }
 
   .moreOptions-OverviewContainer{
@@ -3125,9 +3143,12 @@ font-size: 0.9rem;
   }
   .mobileMenuContainer{
     display: block;
+    z-index: 111;
+    position: relative;
+
   }
   .mobileMenuBarcontainer{
-    background-color: white;
+    /* background-color: white; */
     width: 100%;
     /* height: 94px; */
     /* margin-top: 3.5%; */
@@ -3363,11 +3384,16 @@ font-size: 0.9rem;
 }
 
 .aside-expanded {
-  background-color: #032f27;
+  /* background-color: #032f27;
   padding: 10px 1rem 10px 5px;
   width: 20rem;
   transition: width 0.3s ease;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px; */
+  background-color: #032f27;
+  padding: 2px 5px 2px 2px;
+  width: 20rem;
+  transition: width 0.3s ease;
+  border-radius: 0px 15px 15px 0px;
 }
 
 .sidebar-expanded {
